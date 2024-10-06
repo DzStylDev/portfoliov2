@@ -4,6 +4,7 @@ import { faGithub} from '@fortawesome/free-brands-svg-icons';
 import { motion } from 'framer-motion'
 import revealText from '../utils/revelText';
 import revelText from '../utils/revelText';
+import { faFilePdf } from '@fortawesome/free-regular-svg-icons';
 
 export default function AProposDeMoi({ refSection }) {
 
@@ -84,11 +85,15 @@ export default function AProposDeMoi({ refSection }) {
 
 
           <div className='mb-3 mt-2'>
-            <motion.a
-            download={true}
-            href='../assets/Cv amine.pdf'
-              className='inline-flex items-center px-9 py-2 text-sm font-medium text-center text-white rounded-lg bg-button-bg hover:bg-button-hover-bg  transition-all ease-in-out delay-75"'>Télécharger mon CV
-              </motion.a>
+            <div className='mb-3 mt-2'>
+              <motion.a
+              download={true}
+              href='../assets/Cv amine.pdf'
+                className='inline-flex items-center justify-between min-w-40 gap-2 px-5 py-2 text-sm font-medium text-center text-white rounded-lg bg-button-bg hover:bg-button-hover-bg  transition-all ease-in-out delay-75'>
+                  <div>Télécharger mon cv</div>
+                  <FontAwesomeIcon icon={faFilePdf} size='xl' />
+                </motion.a>
+            </div>
           </div>
 
           <button>
@@ -104,6 +109,7 @@ export default function AProposDeMoi({ refSection }) {
                 <div>GitHub</div>
                 <FontAwesomeIcon icon={faGithub} size='xl' />
               </motion.a>
+              
               </div>
             </div>
 
