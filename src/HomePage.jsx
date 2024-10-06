@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
-import A_Propos_De_Moi from './components/A_Propos_De_Moi';
-import DE_Professionnel from './components/DE_Professionnel';
+import AProposDeMoi from './components/AProposDeMoi';
+import DEProfessionnel from './components/DEProfessionnel';
 import Competences from './components/Competences';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
@@ -31,8 +31,8 @@ export default function HomePage() {
         break;
       case 'footerRef':
         footerRef.current.scrollIntoView({ behavior: 'smooth' })
-      default:
         break;
+      default:
     }
   };
 
@@ -42,7 +42,7 @@ export default function HomePage() {
       <Header scrollToSection={scrollToSection} />
         
       <section>
-        <A_Propos_De_Moi refSection={aboutRef}/>
+        <AProposDeMoi refSection={aboutRef}/>
       </section>
       
       <section ref={competencesRef}>
@@ -50,7 +50,7 @@ export default function HomePage() {
       </section>
 
       <section>
-        <DE_Professionnel />
+        <DEProfessionnel />
       </section>
 
       <section ref={projectsRef}>

@@ -19,7 +19,7 @@ export default function Header({ scrollToSection }) {
       <div className="flex mr-96 w-full justify-between items-center align-middle">
         <div className='text-white text-xl'>Amine Meddour</div>
         <div className='flex gap-2 justify-around px-2 py-1 rounded-sm align-middle items-center'>
-          <a href="" className="
+          <button className="
                 inline-flex 
                 items-center 
                 px-5 py-1 
@@ -36,19 +36,19 @@ export default function Header({ scrollToSection }) {
                 delay-75"
             >
             Accueil
-          </a>
-          <a href="#" onClick={() => scrollToSection('about')} className="inline-flex items-center px-5 py-1 text-sm font-medium text-center text-white rounded-lg focus:outline-none bg-button-bg hover:bg-button-hover-bg transition-all ease-in-out delay-75">
+          </button>
+          <button onClick={() => scrollToSection('about')} className="inline-flex items-center px-5 py-1 text-sm font-medium text-center text-white rounded-lg focus:outline-none bg-button-bg hover:bg-button-hover-bg transition-all ease-in-out delay-75">
             A propos de moi
-          </a>
-          <a href="#" onClick={() => scrollToSection('competences')}  className="inline-flex items-center px-5 py-1 text-sm font-medium text-center text-white rounded-lg focus:outline-none bg-button-bg hover:bg-button-hover-bg transition-all ease-in-out delay-75">
+          </button>
+          <button href="#" onClick={() => scrollToSection('competences')}  className="inline-flex items-center px-5 py-1 text-sm font-medium text-center text-white rounded-lg focus:outline-none bg-button-bg hover:bg-button-hover-bg transition-all ease-in-out delay-75">
             Compétences
-          </a>
-          <a href="#" onClick={() => scrollToSection('projects')}  className="inline-flex items-center px-5 py-1 text-sm font-medium text-center text-white rounded-lg focus:outline-none bg-button-bg hover:bg-button-hover-bg transition-all ease-in-out delay-75">
+          </button>
+          <button href="#" onClick={() => scrollToSection('projects')}  className="inline-flex items-center px-5 py-1 text-sm font-medium text-center text-white rounded-lg focus:outline-none bg-button-bg hover:bg-button-hover-bg transition-all ease-in-out delay-75">
             Mes Projets
-          </a>
-          <a href="#" onClick={() => scrollToSection('contact')} className='className="inline-flex justify-between flex align-middle items-center px-5 py-1 text-sm font-medium text-center text-white rounded-lg focus:outline-none bg-button-bg hover:bg-button-hover-bg transition-all ease-in-out delay-75"'>
+          </button>
+          <button href="#" onClick={() => scrollToSection('contact')} className='className="inline-flex justify-between flex align-middle items-center px-5 py-1 text-sm font-medium text-center text-white rounded-lg focus:outline-none bg-button-bg hover:bg-button-hover-bg transition-all ease-in-out delay-75"'>
             <span>Contact</span>
-          </a>
+          </button>
         </div>
 
       </div>

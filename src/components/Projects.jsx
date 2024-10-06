@@ -144,6 +144,7 @@ export default function Projects({ title }) {
 
       addFiles.push(storageRef(storage, `${projet.titre}_images`))
 
+      return addFiles
     })
 
     let promises = addFiles.map((reference, index) => {
@@ -276,7 +277,7 @@ export default function Projects({ title }) {
               </div>
               <div className="flex pt-2 gap-2 items-center align-middle">
                 <div>
-                  <a href="#" className="bg-primary-bg text-[#ffffff] px-3 py-2 rounded-lg inline-flex items-center align-middle">
+                  <button className="bg-primary-bg text-[#ffffff] px-3 py-2 rounded-lg inline-flex items-center align-middle">
                     {
                       item.member === "one"
                         ?
@@ -289,10 +290,10 @@ export default function Projects({ title }) {
                         </svg>
                     }
                     <span className='ml-2'>{item.member === "one" ? '1' : 'Plusieurs'}</span>
-                  </a>
+                  </button>
                 </div>
                 <div className='flex items-center align-middle'>
-                  <a href="#" className='bg-gradient-to-tr bg-primary-bg text-[#ffffff] px-3 py-2 rounded-lg inline-flex items-center align-middle '>
+                  <button className='bg-gradient-to-tr bg-primary-bg text-[#ffffff] px-3 py-2 rounded-lg inline-flex items-center align-middle '>
                     <span>
                       {
                         typeof item.icon === "object"
@@ -303,15 +304,15 @@ export default function Projects({ title }) {
                       }
                     </span>
                     {/* <span className='ml-2 text-center'>{typeof item.icon === "object" ? item.icon.iconName : item.icon}</span>  */}
-                  </a>
-                  <a href={item.link} target='_blank' className='ml-2 bg-gradient-to-tr bg-primary-bg hover:bg-button-hover-bg cursor-pointer transition-all duration-300 ease-out text-[#ffffff] px-3 py-2 rounded-lg inline-flex items-center align-middle '>
+                  </button>
+                  <a href={item.link} target='_blank' rel="noreferrer" className='ml-2 bg-gradient-to-tr bg-primary-bg hover:bg-button-hover-bg cursor-pointer transition-all duration-300 ease-out text-[#ffffff] px-3 py-2 rounded-lg inline-flex items-center align-middle '>
                     <FontAwesomeIcon icon={faGithub} fontSize={25} />
                   </a>
                 </div>
                 
               </div>
               <div className='mt-2 flex'>
-                  <a href="#" onClick={() => deleteProject(item.keyID, item)} className='bg-red-400 px-5 py-2 rounded-md text-sm cursor-pointer transition-all duration-200 ease-in-out hover:text-red-500 hover:bg-white'>Supprimer ce project</a>
+                  <button onClick={() => deleteProject(item.keyID, item)} className='bg-red-400 px-5 py-2 rounded-md text-sm cursor-pointer transition-all duration-200 ease-in-out hover:text-red-500 hover:bg-white'>Supprimer ce project</button>
                 </div>
             </div>
           </div>
