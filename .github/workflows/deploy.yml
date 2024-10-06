@@ -4,8 +4,11 @@
 name: Deploy react app portfolio
 
 on:
+  push:
+    branches:
+      - main
   release:
-    types: [created]
+      types: [created]
 
 jobs:
   build:
