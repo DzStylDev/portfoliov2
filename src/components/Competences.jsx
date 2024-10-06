@@ -1,5 +1,5 @@
 import React from 'react'
-import { faBootstrap, faCss3, faGit, faGithub, faHtml5, faJava, faLaravel, faLinkedin, faPhp, faReact, faSkype, faSymfony, faTelegram, faJs, faJsSquare, faPython, faGitlab, faVuejs, faSass, faRaspberryPi, faDocker, faLinux } from '@fortawesome/free-brands-svg-icons';
+import { faBootstrap, faJava, faLaravel, faPhp, faSymfony, faJs, faDocker } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { motion } from "framer-motion"
 

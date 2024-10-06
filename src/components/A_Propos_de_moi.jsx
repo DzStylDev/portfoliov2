@@ -1,6 +1,5 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBootstrap, faCss3, faGit, faGithub, faHtml5, faJava, faLaravel, faLinkedin, faPhp, faReact, faSkype, faSymfony, faTelegram, faJs, faJsSquare, faPython, faGitlab, faVuejs, faSass, faRaspberryPi, faDocker } from '@fortawesome/free-brands-svg-icons';
 import { motion, Variants } from 'framer-motion'
 import revealText from '../utils/revelText';
 import revelText from '../utils/revelText';
