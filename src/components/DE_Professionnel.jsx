@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import React from 'react'
-export default function DE_professionnel() {
+export default function DE_Professionnel() {
   return (
     <motion.div className='p-1 mt-2'
     initial={{

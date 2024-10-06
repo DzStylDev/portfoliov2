@@ -1,11 +1,12 @@
 import React, { useRef } from 'react'
-import A_Propos_de_moi from './components/A_Propos_de_moi';
-import DE_professionnel from './components/DE_professionnel';
+import A_Propos_De_Moi from './components/A_Propos_De_Moi';
+import DE_Professionnel from './components/DE_Professionnel';
 import Competences from './components/Competences';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import AProposDeMoi from './components/A_Propos_De_Moi';
 
 export default function HomePage() {
 
@@ -42,7 +43,7 @@ export default function HomePage() {
       <Header scrollToSection={scrollToSection} />
         
       <section>
-        <A_Propos_de_moi refSection={aboutRef}/>
+        <A_Propos_De_Moi refSection={aboutRef}/>
       </section>
       
       <section ref={competencesRef}>
@@ -50,7 +51,7 @@ export default function HomePage() {
       </section>
 
       <section>
-        <DE_professionnel />
+        <DE_Professionnel />
       </section>
 
       <section ref={projectsRef}>

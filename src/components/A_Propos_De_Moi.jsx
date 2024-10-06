@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import revealText from '../utils/revelText';
 import revelText from '../utils/revelText';
 
-export default function A_Propos_de_moi({ refSection }) {
+export default function A_Propos_De_Moi({ refSection }) {
 
   let text = `
     J'ai 25 ans , je développe depuis 4 ans et je suis en deuxième année de web@academie
