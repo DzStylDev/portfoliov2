@@ -1,10 +1,8 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import A_Propos_de_moi from './components/A_Propos_de_moi';
 import DE_professionnel from './components/DE_professionnel';
 import Competences from './components/Competences';
 import Projects from './components/Projects';
-import Centre_Interet from './components/Centre_Interet';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Header from './components/Header';

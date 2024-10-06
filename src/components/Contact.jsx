@@ -1,5 +1,5 @@
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
-import { faICursor, faLocation, faLocationDot, faMobile, faMobilePhone, faVoicemail } from '@fortawesome/free-solid-svg-icons'
+import { faLocationDot,  faMobilePhone } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
 import Swal from "sweetalert2"
