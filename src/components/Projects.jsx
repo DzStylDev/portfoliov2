@@ -1,18 +1,16 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBootstrap, faCss3, faGit, faGithub, faHtml5, faJava, faLaravel, faLinkedin, faPhp, faReact, faSkype, faSymfony, faTelegram, faJs, faJsSquare, faPython, faGitlab, faVuejs, faSass, faRaspberryPi, faDocker, faNodeJs, faLinux, faJsfiddle } from '@fortawesome/free-brands-svg-icons';
-import { Button, Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react';
-import { ExclamationTriangleIcon, ExclamationCircleIcon, PlusIcon, ArrowLeftEndOnRectangleIcon } from '@heroicons/react/24/solid';
-import { getDatabase, push, ref as dbRef, set, get, ref, remove } from 'firebase/database'
+import { faBootstrap , faGithub, faJava, faLaravel, faPhp, faSymfony, faJs, faDocker } from '@fortawesome/free-brands-svg-icons';
+import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react';
+import { PlusIcon } from '@heroicons/react/24/solid';
+import { getDatabase, push, ref as dbRef, set, get, remove } from 'firebase/database'
 import { getDownloadURL, list, ref as storageRef, uploadBytes, getStorage, listAll , deleteObject} from 'firebase/storage'
-import { collection, getDocs } from 'firebase/firestore';
 import app, { imageDB } from "../firebaseConfig"
-import { v4 } from 'uuid';
 import toast from 'react-hot-toast';
 import { useEffect } from 'react';
 import Lightbox from "yet-another-react-lightbox";
 import 'yet-another-react-lightbox/styles.css';
-import {Captions, Counter, Download, Fullscreen, Thumbnails, Zoom} from 'yet-another-react-lightbox/plugins';
+import { Counter, Download, Fullscreen, Thumbnails, Zoom} from 'yet-another-react-lightbox/plugins';
 import 'yet-another-react-lightbox/plugins/captions.css';
 import 'yet-another-react-lightbox/plugins/thumbnails.css';
 import "yet-another-react-lightbox/plugins/counter.css";
@@ -233,7 +231,6 @@ export default function Projects({ title }) {
         }
 
       </div>
-      {console.log(projects)}
 
 
       
@@ -263,7 +260,7 @@ export default function Projects({ title }) {
                 showToggle: true,
                 descriptionTextAlign: 'end'
               }}
-              open={open}
+              open={true}
               close={() => setOpenGallerie(null)}  
               slides={item.checkGallerie}
             />
@@ -279,7 +276,7 @@ export default function Projects({ title }) {
               </div>
               <div className="flex pt-2 gap-2 items-center align-middle">
                 <div>
-                  <a className="bg-primary-bg text-[#ffffff] px-3 py-2 rounded-lg inline-flex items-center align-middle">
+                  <a href="#" className="bg-primary-bg text-[#ffffff] px-3 py-2 rounded-lg inline-flex items-center align-middle">
                     {
                       item.member === "one"
                         ?
@@ -295,7 +292,7 @@ export default function Projects({ title }) {
                   </a>
                 </div>
                 <div className='flex items-center align-middle'>
-                  <a className='bg-gradient-to-tr bg-primary-bg text-[#ffffff] px-3 py-2 rounded-lg inline-flex items-center align-middle '>
+                  <a href="#" className='bg-gradient-to-tr bg-primary-bg text-[#ffffff] px-3 py-2 rounded-lg inline-flex items-center align-middle '>
                     <span>
                       {
                         typeof item.icon === "object"
@@ -314,7 +311,7 @@ export default function Projects({ title }) {
                 
               </div>
               <div className='mt-2 flex'>
-                  <a onClick={() => deleteProject(item.keyID, item)} className='bg-red-400 px-5 py-2 rounded-md text-sm cursor-pointer transition-all duration-200 ease-in-out hover:text-red-500 hover:bg-white'>Supprimer ce project</a>
+                  <a href="#" onClick={() => deleteProject(item.keyID, item)} className='bg-red-400 px-5 py-2 rounded-md text-sm cursor-pointer transition-all duration-200 ease-in-out hover:text-red-500 hover:bg-white'>Supprimer ce project</a>
                 </div>
             </div>
           </div>
