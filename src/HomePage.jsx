@@ -6,7 +6,6 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import AProposDeMoi from './components/A_Propos_De_Moi';
 
 export default function HomePage() {
 
