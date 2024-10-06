@@ -1,5 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub} from '@fortawesome/free-brands-svg-icons';
 import { motion, Variants } from 'framer-motion'
 import revealText from '../utils/revelText';
 import revelText from '../utils/revelText';
