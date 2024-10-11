@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
-import A_Propos_de_moi from './components/A_Propos_de_moi';
-import DE_professionnel from './components/DE_professionnel';
+import A_Propos_de_moi from './components/AProposDeMoi';
+import DE_professionnel from './components/DEProfessionnel';
 import Competences from './components/Competences';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
