@@ -1,7 +1,14 @@
-import React from 'react'
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React, { useRef, useState } from 'react'
 import { motion } from "framer-motion"
 export default function Header({ scrollToSection }) {
   
+  const [isMenuOpen , setIsMenuOpen] = useState(false)
+
+  const handleClick = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
   return (  <motion.header 
     initial={{ 
       y: -25, 
@@ -14,45 +21,45 @@ export default function Header({ scrollToSection }) {
       transition={{ 
         ease: 'easeIn', 
         duration: 5
-      }}  className='top-0 flex text-white z-50'>
-    <div className=''>
-      <div className="flex mr-96 w-full justify-between items-center align-middle">
-        <div className='text-white text-xl'>Amine Meddour</div>
-        <div className='flex gap-2 justify-around px-2 py-1 rounded-sm align-middle items-center'>
-          <button className="
-                inline-flex 
-                items-center 
-                px-5 py-1 
-                text-sm 
-                font-medium 
-                text-center 
-                text-white 
-                rounded-lg 
-                focus:outline-none 
-                bg-button-bg 
-                hover:bg-button-hover-bg 
-                transition-all
-                ease-in-out 
-                delay-75"
-            >
-            Accueil
-          </button>
-          <button onClick={() => scrollToSection('about')} className="inline-flex items-center px-5 py-1 text-sm font-medium text-center text-white rounded-lg focus:outline-none bg-button-bg hover:bg-button-hover-bg transition-all ease-in-out delay-75">
-            A propos de moi
-          </button>
-          <button href="#" onClick={() => scrollToSection('competences')}  className="inline-flex items-center px-5 py-1 text-sm font-medium text-center text-white rounded-lg focus:outline-none bg-button-bg hover:bg-button-hover-bg transition-all ease-in-out delay-75">
-            Compétences
-          </button>
-          <button href="#" onClick={() => scrollToSection('projects')}  className="inline-flex items-center px-5 py-1 text-sm font-medium text-center text-white rounded-lg focus:outline-none bg-button-bg hover:bg-button-hover-bg transition-all ease-in-out delay-75">
-            Mes Projets
-          </button>
-          <button href="#" onClick={() => scrollToSection('contact')} className='className="inline-flex justify-between flex align-middle items-center px-5 py-1 text-sm font-medium text-center text-white rounded-lg focus:outline-none bg-button-bg hover:bg-button-hover-bg transition-all ease-in-out delay-75"'>
-            <span>Contact</span>
-          </button>
+      }}  className='top-0 flex text-white z-50 items-center'>
+    <div className='w-full'>
+      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:align-middle">
+        
+        <div className='w-full flex md:flex-col flex-row justify-between'>
+          
+          <div className='flex flex-col justify-center'>
+            <div className='text-white text-xl'>Amine Meddour</div>
+            <span style={{ color: 'mintcream', fontWeight: 'bold', fontSize: '.8em' }}>DEVELOPPEUR WEB FULLSTACK</span>
+          </div>
+
+          <div className='md:hidden'>
+            <button id="hamburger-button" className='text-3xl focus:outline-none min-sm::bg-red-600 block md:hidden transition-all' onClick={handleClick}>&#9776;</button>
+          </div>
         </div>
 
+      <div className='gap-2 justify-end px-2 py-1 rounded-sm align-middle items-center flex-row md:flex navbar__links w-full ' >
+          <a href="">
+            Accueil
+          </a>
+          <a style={{minWidth:"105px"}} href="#" onClick={() => scrollToSection('about')} >
+            A propos
+          </a>
+          <a href="#" onClick={() => scrollToSection('competences')} >
+            Compétences
+          </a>
+          <a href="#" onClick={() => scrollToSection('projects')} >
+            Projets
+          </a>
+          <a href="#" onClick={() => scrollToSection('contact')} >
+            <span>Contact</span>
+          </a>
+        </div>
+
+
       </div>
-      <span style={{ color: 'mintcream', fontWeight: 'bold', fontSize: '.8em' }}>DEVELOPPEUR WEB FULLSTACK</span>
+
+      
+      
     </div>
   </motion.header>
   )

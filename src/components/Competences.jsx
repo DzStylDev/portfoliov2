@@ -1,5 +1,5 @@
 import React from 'react'
-import { faBootstrap, faJava, faLaravel, faPhp, faSymfony, faJs, faDocker } from '@fortawesome/free-brands-svg-icons';
+import { faBootstrap, faCss3, faGit, faGithub, faHtml5, faJava, faLaravel, faLinkedin, faPhp, faReact, faSkype, faSymfony, faTelegram, faJs, faJsSquare, faPython, faGitlab, faVuejs, faSass, faRaspberryPi, faDocker, faLinux } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { motion } from "framer-motion"
 
@@ -96,20 +96,20 @@ export default function Competences() {
         </motion.ul>
         <div id="defaultTabContent">
             <div className=" p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800 transition-all duration-300 ease-in-out" id="framework" role="tabpanel" aria-labelledby="framework-tab">
-                  <div className="grid grid-cols-1 xl:grid-cols-8 gap-3.5 py-4">
+                  <div className="grid grid-flow-col md:grid-cols-8 gap-3.5 py-4">
                     { hoverCompetence(faLaravel, 'Laravel', 'red', true) }
                     { hoverCompetence(faSymfony, 'Symfony', 'mintcream', true) }
                     { hoverCompetence(faBootstrap, 'BootStrap', '#7E13F8', true) }
                 </div>
             </div>
             <div className="p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800 invisible hidden opacity-0 transition-all duration-300 ease-in-out" id="versionning" role="tabpanel" aria-labelledby="versionning-tab">
-              <div className="grid grid-cols-1 xl:grid-cols-8 gap-3.5 py-4">
+              <div className="grid grid-cols-3 md:grid-cols-9 py-4">
                     { hoverCompetence('git.svg', 'Git', null, false) }
                     { hoverCompetence('gitlab.svg', 'GitLab', null, false) }
               </div>
             </div>
             <div className="p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800 invisible hidden opacity-0 transition-all duration-300 ease-in-out"   id="front-end" role="tabpanel" aria-labelledby="front-end-tab">
-              <div className="grid grid-cols-1 xl:grid-cols-8 gap-3.5 py-4">
+              <div className="grid grid-cols-3 md:grid-cols-9 gap-4 py-4">
                   { hoverCompetence('react-svgrepo-com.svg', 'React', null, false) }
                   { hoverCompetence(faJs, 'JavaScript', '#F7DF1E', true) }
                   { hoverCompetence('css3-svgrepo-com.svg', 'Css', null, false) }
@@ -122,7 +122,7 @@ export default function Competences() {
               </div>
             </div>
             <div className="p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800 invisible hidden opacity-0 transition-all duration-300 ease-in-out"   id="back-end" role="tabpanel" aria-labelledby="back-end-tab">
-              <div className="grid grid-cols-1 xl:grid-cols-8 gap-3.5 py-4">
+              <div className="grid grid-cols-3 md:grid-cols-9 py-4">
                   { hoverCompetence(faJs, 'Javascript', '#F7DF1E', true) }
                   { hoverCompetence(faJava, 'Java', '#d82222', true) }
                   { hoverCompetence('python-svgrepo-com.svg', 'Python', null, false) }
@@ -134,20 +134,20 @@ export default function Competences() {
             </div>
             
             <div className="p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800 invisible hidden opacity-0 transition-all duration-300 ease-in-out"   id="bdd" role="tabpanel" aria-labelledby="bdd-tab">
-              <div className="grid grid-cols-1 xl:grid-cols-8 gap-3.5 py-4">
+              <div className="grid grid-cols-3 md:grid-cols-9 py-4">
                 { hoverCompetence('mysql-logo-svgrepo-com.svg', 'Mysql', null, false) }
                 { hoverCompetence('mongo-svgrepo-com.svg', 'Mongo DB', null, false) }
               </div>
             </div>
             
             <div className="p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800 invisible hidden opacity-0 transition-all duration-300 ease-in-out"   id="ed" role="tabpanel" aria-labelledby="ed-tab">
-                <div className="grid grid-cols-1 xl:grid-cols-8 gap-3.5 py-4">
+                <div className="grid grid-cols-3 md:grid-cols-9 py-4">
                     { hoverCompetence(faDocker, 'Mysql', "#2396ed", true) }
                     { hoverCompetence('linux-svgrepo-com.svg', 'Linux', null, false) }
                 </div>
             </div>
             <div className=" p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800 hidden transition-all duration-300 ease-in-out" id="lb" role="tabpanel" aria-labelledby="lb-tab">
-                  <div className="grid grid-cols-1 xl:grid-cols-8 gap-3.5 py-4">
+                  <div className="grid grid-cols-3 md:grid-cols-9 py-4">
                     { hoverCompetence('Threejs-logo.svg', 'ThreeJS', null, false) }
                 </div>
             </div>

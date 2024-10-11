@@ -144,7 +144,6 @@ export default function Projects({ title }) {
 
       addFiles.push(storageRef(storage, `${projet.titre}_images`))
 
-      return addFiles
     })
 
     let promises = addFiles.map((reference, index) => {
@@ -235,12 +234,12 @@ export default function Projects({ title }) {
 
 
       
-      <div className="grid grid-cols-3 xl:grid-cols-4 gap-3.5 items-center align-middle h-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-2 gap-3.5 items-center align-middle h-full">
       
      
       
         {projects.length > 0 && projects.map((item, index) => (
-          <div key={index} className='flex w-full flex-wrap bg-button-bg gap-5 rounded-lg justify-center h-full'>
+          <div key={index} className='flex w-full flex-wrap bg-button-bg gap-5 justify-center h-full border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
 
         <button  style={{ marginTop: '1em' }} onClick={() => setOpenGallerie(index)}>
         <FontAwesomeIcon icon={faImages} color='#4a596e' fontSize={30} className='text-[#4a596e] hover:text-blue-200 transition-all duration-300 ease-in-out' />
@@ -277,7 +276,7 @@ export default function Projects({ title }) {
               </div>
               <div className="flex pt-2 gap-2 items-center align-middle">
                 <div>
-                  <button className="bg-primary-bg text-[#ffffff] px-3 py-2 rounded-lg inline-flex items-center align-middle">
+                  <a href="#" className="bg-primary-bg text-[#ffffff] px-3 py-2 rounded-lg inline-flex items-center align-middle">
                     {
                       item.member === "one"
                         ?
@@ -290,10 +289,10 @@ export default function Projects({ title }) {
                         </svg>
                     }
                     <span className='ml-2'>{item.member === "one" ? '1' : 'Plusieurs'}</span>
-                  </button>
+                  </a>
                 </div>
                 <div className='flex items-center align-middle'>
-                  <button className='bg-gradient-to-tr bg-primary-bg text-[#ffffff] px-3 py-2 rounded-lg inline-flex items-center align-middle '>
+                  <a href="#" className='bg-gradient-to-tr bg-primary-bg text-[#ffffff] px-3 py-2 rounded-lg inline-flex items-center align-middle '>
                     <span>
                       {
                         typeof item.icon === "object"
@@ -303,16 +302,15 @@ export default function Projects({ title }) {
                           <img src={`../assets/images/${item.icon}`} alt="" />
                       }
                     </span>
-                    {/* <span className='ml-2 text-center'>{typeof item.icon === "object" ? item.icon.iconName : item.icon}</span>  */}
-                  </button>
-                  <a href={item.link} target='_blank' rel="noreferrer" className='ml-2 bg-gradient-to-tr bg-primary-bg hover:bg-button-hover-bg cursor-pointer transition-all duration-300 ease-out text-[#ffffff] px-3 py-2 rounded-lg inline-flex items-center align-middle '>
+                  </a>
+                  <a href={item.link} target='_blank' className='ml-2 bg-gradient-to-tr bg-primary-bg hover:bg-button-hover-bg cursor-pointer transition-all duration-300 ease-out text-[#ffffff] px-3 py-2 rounded-lg inline-flex items-center align-middle '>
                     <FontAwesomeIcon icon={faGithub} fontSize={25} />
                   </a>
                 </div>
                 
               </div>
               <div className='mt-2 flex'>
-                  <button onClick={() => deleteProject(item.keyID, item)} className='bg-red-400 px-5 py-2 rounded-md text-sm cursor-pointer transition-all duration-200 ease-in-out hover:text-red-500 hover:bg-white'>Supprimer ce project</button>
+                  <a href="#" onClick={() => deleteProject(item.keyID, item)} className='bg-red-400 px-5 py-2 rounded-md text-sm cursor-pointer transition-all duration-200 ease-in-out hover:text-red-500 hover:bg-white'>Supprimer ce project</a>
                 </div>
             </div>
           </div>
@@ -330,8 +328,8 @@ export default function Projects({ title }) {
                 className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in"
               />
 
-              <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
-                <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+              <div className="fixed inset-0 z-10 overflow-y-auto">
+                <div className="flex min-h-full justify-center p-4 text-center">
                   <DialogPanel
                     transition
                     className="relative transform overflow-hidden rounded-lg bg-gray-800 text-left shadow-xl transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in sm:my-8 sm:w-full sm:max-w-lg data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95"
@@ -355,9 +353,9 @@ export default function Projects({ title }) {
 
                       </div>
                       <div className='p-1 rounded-sm'>
-                        <div className="flex md:w-1/2 xl:w-2/5 2xl:w-full 3xl:w-1/3 mx-auto 3xl:p-14 rounded-2xl gap-5">
-                          <form className="w-full grid grid-cols-3 xl:grid-cols-1 bg-gray-800 rounded-xl">
-                            <div className='flex justify-between'>
+                        <div className="mx-auto 3xl:p-14 rounded-2xl gap-5">
+                          <form className="w-full grid grid-cols-1 xl:grid-cols-1 bg-gray-800 rounded-xl">
+                            <div className='flex flex-col md:flex-row gap-2'>
                               <div className="">
                                 <label htmlFor="title" className="block mb-2 text-sm font-medium text-white">Titre du projet</label>
                                 <div className="relative text-gray-400"><span className="absolute inset-y-0 left-0 flex items-center p-1 pl-3"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
@@ -390,7 +388,7 @@ export default function Projects({ title }) {
                             <div className="">
                               <label htmlFor="icones" className="block mb-2 text-sm font-medium text-white">Icones</label>
 
-                              <div className="flex">
+                              <div className="">
 
                                 <label htmlFor="icones" className="sr-only">Selectionne le language</label>
                                 <select id="icones"
@@ -423,7 +421,7 @@ export default function Projects({ title }) {
                               </div>
                             </div>
                             <div className="flex justify-between items-center align-middle">
-                              <ul className="grid gap-6 md:grid-cols-2" onChange={getMember}>
+                              <ul className="grid gap-6 md:grid-cols-2 grid-cols-2" onChange={getMember}>
                                 <li>
                                   <input type="checkbox" id="option-1" value="one" className="hidden peer" required="" />
                                   <label htmlFor="option-1" className="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-white hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">

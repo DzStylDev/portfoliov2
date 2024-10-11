@@ -1,8 +1,11 @@
-import React, { useRef } from 'react'
-import AProposDeMoi from './components/AProposDeMoi';
-import DEProfessionnel from './components/DEProfessionnel';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React, { useEffect, useRef } from 'react'
+import { faBootstrap, faCss3, faGit, faGithub, faHtml5, faJava, faLaravel, faLinkedin, faPhp, faReact, faSkype, faSymfony, faTelegram, faJs, faJsSquare, faPython, faGitlab, faVuejs, faSass, faRaspberryPi, faDocker } from '@fortawesome/free-brands-svg-icons';
+import A_Propos_de_moi from './components/A_Propos_de_moi';
+import DE_professionnel from './components/DE_professionnel';
 import Competences from './components/Competences';
 import Projects from './components/Projects';
+import Centre_Interet from './components/Centre_Interet';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -31,18 +34,17 @@ export default function HomePage() {
         break;
       case 'footerRef':
         footerRef.current.scrollIntoView({ behavior: 'smooth' })
-        break;
       default:
+        break;
     }
   };
 
   return (
-    <div className='bg-my-gradient font-pol1 text-white box-border p-0 m-0'>
-      <div className='mx-72 min-w-20 p-4'>
+    <div className='font-pol1 text-white box-border p-4 h-full'>
       <Header scrollToSection={scrollToSection} />
         
       <section>
-        <AProposDeMoi refSection={aboutRef}/>
+        <A_Propos_de_moi refSection={aboutRef}/>
       </section>
       
       <section ref={competencesRef}>
@@ -50,13 +52,12 @@ export default function HomePage() {
       </section>
 
       <section>
-        <DEProfessionnel />
+        <DE_professionnel />
       </section>
 
       <section ref={projectsRef}>
         <Projects title="Mes Projets" />
       </section>
-      
 
       <section ref={contactRef}>
         <Contact />
@@ -65,8 +66,6 @@ export default function HomePage() {
       <section ref={footerRef}>
         <Footer />
       </section>
-      </div>
-
     </div>
   )
 }
