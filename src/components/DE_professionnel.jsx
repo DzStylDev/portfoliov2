@@ -48,9 +48,9 @@ export default function DE_professionnel() {
                       <div className="py-2">
                         <p className="text-white text-sm font-bold">DEVELOPPEUR-INTEGRATEUR WEB (Titre 5 RNCP - BAC +2)</p>
                         <p className="text-gray-400 text-xs mt-2">2022 / 2024</p>
-                        <img src="../assets/images/webacademy.svg" />
+                        <img src="../assets/images/webacademy.svg" alt='' />
                         <div className="flex items-center align-middle gap-1">
-                          <img src="../assets/images/epitech.svg" />
+                          <img src="../assets/images/epitech.svg" alt='epitech-img'/>
                           <p>- Paris</p>                          
                         </div>
                         <div className="border-b-[#324b76] border mt-2"></div>
