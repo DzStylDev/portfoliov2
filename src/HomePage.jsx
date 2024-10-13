@@ -34,7 +34,6 @@ export default function HomePage() {
         break;
       case 'footerRef':
         element = footerRef.current
-      break;
     }
 
     if (element) {
