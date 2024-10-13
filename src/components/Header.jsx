@@ -1,6 +1,4 @@
-import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { motion } from "framer-motion"
 export default function Header({ scrollToSection }) {
   

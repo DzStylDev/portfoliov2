@@ -143,7 +143,7 @@ export default function Projects({ title }) {
     projects.map((projet, index) => {
 
       addFiles.push(storageRef(storage, `${projet.titre}_images`))
-
+      return addFiles
     })
 
     let promises = addFiles.map((reference, index) => {
