@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
-import A_Propos_de_moi from './components/AProposDeMoi';
-import DE_professionnel from './components/DEProfessionnel';
+import AProposDeMoi from './components/AProposDeMoi';
+import DEProfessionnel from './components/DEProfessionnel';
 import Competences from './components/Competences';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
@@ -16,23 +16,34 @@ export default function HomePage() {
   const footerRef = useRef(null)
 
   const scrollToSection = (section) => {
+    const headerOffset = document.querySelector('.header').offsetHeight
+    let element;
+    
     switch (section) {
       case 'about':
-        aboutRef.current.scrollIntoView({ behavior: 'smooth' });
+        element = aboutRef.current
         break;
       case 'competences':
-        competencesRef.current.scrollIntoView({ behavior: 'smooth' });
+        element = competencesRef.current
         break;
       case 'projects':
-        projectsRef.current.scrollIntoView({ behavior: 'smooth' });
+        element = projectsRef.current
         break;
       case 'contact':
-        contactRef.current.scrollIntoView({ behavior: 'smooth' });
+        element = contactRef.current
         break;
       case 'footerRef':
-        footerRef.current.scrollIntoView({ behavior: 'smooth' })
+        element = footerRef.current
       default:
-        break;
+        return;
+    }
+
+    if (element) {
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth',
+      });
     }
   };
 
@@ -41,7 +52,7 @@ export default function HomePage() {
       <Header scrollToSection={scrollToSection} />
         
       <section>
-        <A_Propos_de_moi refSection={aboutRef}/>
+        <AProposDeMoi refSection={aboutRef}/>
       </section>
       
       <section ref={competencesRef}>
@@ -49,7 +60,7 @@ export default function HomePage() {
       </section>
 
       <section>
-        <DE_professionnel />
+        <DEProfessionnel />
       </section>
 
       <section ref={projectsRef}>

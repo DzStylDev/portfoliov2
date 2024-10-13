@@ -14,9 +14,9 @@ export default function DEProfessionnel() {
       duration: 2,
       delay: 3
     }}>
-      <p className='font-bold mb-2'>Mes Diplôme et mes expériences</p>
+      <div className='font-bold mb-2'>Mes Diplôme et mes expériences</div>
       
-    <div className='flex w-full justify-between rounded-lg gap-2'>
+    <div className='flex flex-col md:flex-row w-full justify-between rounded-lg gap-2'>
         <motion.div
         initial={{
           opacity: 0,
@@ -30,7 +30,7 @@ export default function DEProfessionnel() {
           ease: 'easeIn',
           // duration: 3,
           // delay: 6
-        }}>
+        }} className='border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
           <div className='gap-2 flex h-full'>
             <div className='flex rounded-lg shadow-xl"
                 hover:opacity-50
@@ -48,9 +48,9 @@ export default function DEProfessionnel() {
                       <div className="py-2">
                         <p className="text-white text-sm font-bold">DEVELOPPEUR-INTEGRATEUR WEB (Titre 5 RNCP - BAC +2)</p>
                         <p className="text-gray-400 text-xs mt-2">2022 / 2024</p>
-                        <img alt="webacademy-img" src="../assets/images/webacademy.svg" />
+                        <img src="../assets/images/webacademy.svg" alt='webacademy-img' />
                         <div className="flex items-center align-middle gap-1">
-                          <img alt="epitech-img" src="../assets/images/epitech.svg" />
+                          <img src="../assets/images/epitech.svg" alt='epitech-img' />
                           <p>- Paris</p>                          
                         </div>
                         <div className="border-b-[#324b76] border mt-2"></div>
@@ -101,7 +101,8 @@ export default function DEProfessionnel() {
           ease: 'easeIn',
           // duration: 3,
           // delay: 6
-        }}>
+        }}
+        className='border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
           <div className='gap-2 flex'>
             <div className='flex shadow-xl"
                 hover:opacity-50

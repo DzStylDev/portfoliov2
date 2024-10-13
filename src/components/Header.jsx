@@ -4,10 +4,10 @@ import React, { useRef, useState } from 'react'
 import { motion } from "framer-motion"
 export default function Header({ scrollToSection }) {
   
-  const [isMenuOpen , setIsMenuOpen] = useState(false)
+  const [menuVisible , setMenuVisible] = useState(false)
 
-  const handleClick = () => {
-    setIsMenuOpen(!isMenuOpen)
+  const toggleMenu  = () => {
+    setMenuVisible(!menuVisible)
   }
   return (  <motion.header 
     initial={{ 
@@ -21,38 +21,37 @@ export default function Header({ scrollToSection }) {
       transition={{ 
         ease: 'easeIn', 
         duration: 5
-      }}  className='top-0 flex text-white z-50 items-center'>
-    <div className='w-full'>
-      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between lg:align-middle">
-        
-        <div className='w-full flex md:flex-col flex-row justify-between'>
+      }}  className=' flex text-white z-50 items-center w-full fixed header'>
+      <div className="flex flex-col lg:flex-row lg:fixed lg:items-center justify-between align-middle w-[67.6%] [box-shadow:0_2px_4px_rgba(0,_0,_0,_0.5)] backdrop-blur-sm bg-[rgba(0,_0,_0,_0.5)]">
+
+        <div className='w-full flex flex-row md:flex-row md:justify-between justify-between'>
           
           <div className='flex flex-col justify-center'>
             <div className='text-white text-xl'>Amine Meddour</div>
             <span style={{ color: 'mintcream', fontWeight: 'bold', fontSize: '.8em' }}>DEVELOPPEUR WEB FULLSTACK</span>
           </div>
 
-          <div className='md:hidden'>
-            <button id="hamburger-button" className='text-3xl focus:outline-none min-sm::bg-red-600 block md:hidden transition-all' onClick={handleClick}>&#9776;</button>
+          <div className='lg-[500px]:hidden md-[994px]:flex-row md-[994px]:flex'>
+            <button id="hamburger-button" className='text-3xl focus:outline-none block transition-all py-0 px-[.5rem]' onClick={toggleMenu}>&#9776;</button>
           </div>
         </div>
 
-      <div className='gap-2 justify-end px-2 py-1 rounded-sm align-middle items-center flex-row md:flex navbar__links w-full ' >
-          <a href="">
+      <div className={`gap-2 justify-end px-2 py-1 rounded-sm align-middle md:items-center lg:flex-row md:flex flex-col items-center w-full flex menu ${menuVisible ? 'show' : ''}`} >
+          <button href="" className='hover:text-[#5e79a7] rounded-sm px-[.5rem] py-[1em] text-center text-[.9em] min-w-[auto] transition-all'>
             Accueil
-          </a>
-          <a style={{minWidth:"105px"}} href="#" onClick={() => scrollToSection('about')} >
+          </button>
+          <button style={{minWidth:"105px"}} href="#" onClick={() => scrollToSection('about')} className='hover:text-[#5e79a7] rounded-sm px-[.5rem] py-[1em] text-center text-[.9em] min-w-[auto]'>
             A propos
-          </a>
-          <a href="#" onClick={() => scrollToSection('competences')} >
+          </button>
+          <button href="#" onClick={() => scrollToSection('competences')} className='hover:text-[#5e79a7] rounded-sm px-[.5rem] py-[1em] text-center text-[.9em] min-w-[auto]'>
             Compétences
-          </a>
-          <a href="#" onClick={() => scrollToSection('projects')} >
+          </button>
+          <button href="#" onClick={() => scrollToSection('projects')} className='hover:text-[#5e79a7] rounded-sm px-[.5rem] py-[1em] text-center text-[.9em] min-w-[auto]'>
             Projets
-          </a>
-          <a href="#" onClick={() => scrollToSection('contact')} >
+          </button>
+          <button href="#" onClick={() => scrollToSection('contact')} className='hover:text-[#5e79a7] rounded-sm px-[.5rem] py-[1em] text-center text-[.9em] min-w-[auto]'>
             <span>Contact</span>
-          </a>
+          </button>
         </div>
 
 
@@ -60,7 +59,6 @@ export default function Header({ scrollToSection }) {
 
       
       
-    </div>
   </motion.header>
   )
 }

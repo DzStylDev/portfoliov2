@@ -5,14 +5,12 @@ import React, { useState } from 'react'
 import Swal from "sweetalert2"
 
 export default function Contact() {
-  const [result, setResult] = useState("");
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    setResult("Envoi....");
 
     const formData = new FormData(event.target);
 
@@ -28,7 +26,6 @@ export default function Contact() {
     const data = await response.json();
    
     if (data.success) {
-      setResult("Envoi du formulaire avec success");
       Swal.fire({
         title: "Message Envoyé",
         text: "Ton message à était envoyé avec success",

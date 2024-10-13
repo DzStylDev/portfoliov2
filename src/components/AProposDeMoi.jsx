@@ -1,7 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub} from '@fortawesome/free-brands-svg-icons';
-import { motion } from 'framer-motion'
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { motion } from 'framer-motion'  
 import revealText from '../utils/revelText';
 import revelText from '../utils/revelText';
 import { faFilePdf } from '@fortawesome/free-regular-svg-icons';
@@ -9,7 +9,7 @@ import { faFilePdf } from '@fortawesome/free-regular-svg-icons';
 export default function AProposDeMoi({ refSection }) {
 
   let text = `
-    J'ai 25 ans , je développe depuis 4 ans et je suis en deuxième année de web@academie
+    J'ai 26 ans , je développe depuis 4 ans et je suis en deuxième année de web@academie
     J'ai commencé par développer des plugins minecraft, des bots discord et quelques sites (front-end, back-end)
   `
   let cite = "Travailleur , autonome et motivé , possèdant une très bonne faculté d'adaptation et un sens relationnel développé"
@@ -41,7 +41,7 @@ export default function AProposDeMoi({ refSection }) {
         ease: 'easeInOut',
         duration: 5,
         delay: 2
-      }} className='p-1 mt-36'>
+      }} className='p-1 mt-20'>
       <div className='flex'>
         <p className="mb-3 mt-3 font-bold">A propos de moi</p>
       </div>
@@ -85,15 +85,13 @@ export default function AProposDeMoi({ refSection }) {
 
 
           <div className='mb-3 mt-2'>
-            <div className='mb-3 mt-2'>
-              <motion.a
-              download={true}
-              href='../assets/Cv amine.pdf'
-                className='inline-flex items-center justify-between min-w-40 gap-2 px-5 py-2 text-sm font-medium text-center text-white rounded-lg bg-button-bg hover:bg-button-hover-bg  transition-all ease-in-out delay-75'>
-                  <div>Télécharger mon cv</div>
-                  <FontAwesomeIcon icon={faFilePdf} size='xl' />
-                </motion.a>
-            </div>
+            <motion.a
+            download={true}
+            href='../assets/Cv amine.pdf'
+              className='inline-flex items-center justify-between min-w-40 gap-2 px-5 py-2 text-sm font-medium text-center text-white rounded-lg bg-button-bg hover:bg-button-hover-bg  transition-all ease-in-out delay-75'>
+                <div>Télécharger mon cv</div>
+                <FontAwesomeIcon icon={faFilePdf} size='xl' />
+              </motion.a>
           </div>
 
           <button>
@@ -109,7 +107,6 @@ export default function AProposDeMoi({ refSection }) {
                 <div>GitHub</div>
                 <FontAwesomeIcon icon={faGithub} size='xl' />
               </motion.a>
-              
               </div>
             </div>
 

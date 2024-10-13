@@ -5,6 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'max-lg': {'max': '1629px'}, 
+        'min-sm': { 'min': '200px' },
+      },
       backgroundColor: {
         'primary-bg': "#2a2f3f",
         "section-moi": "#0d348a",
