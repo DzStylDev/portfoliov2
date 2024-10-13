@@ -310,7 +310,7 @@ export default function Projects({ title }) {
                 
               </div>
               <div className='mt-2 flex'>
-                { item.titre !== "RPGGames" && item.titre !== "Restaurant" ?
+                { item.titre !== "RPGGames" && item.titre !== "Restaurant" && item.titre !== "Events"  && item.titre !== "Auto Ecole" ?
                   <button onClick={() => deleteProject(item.keyID, item)} className='bg-red-400 px-5 py-2 rounded-md text-sm cursor-pointer transition-all duration-200 ease-in-out hover:text-red-500 hover:bg-white'>Supprimer ce project</button>
                   : 
                   ''
@@ -484,15 +484,6 @@ export default function Projects({ title }) {
           )
         }
       </div>
-
-      <div className='grid grid-cols-2 xl:grid-cols-3 gap-24' >
-        <div className="flex flex-col rounded-3xl w-96 h-auto bg-[#ffffff] shadow-xl justify-between">
-          {
-
-          }
-        </div>
-      </div>
-
 
     </div>
   )
