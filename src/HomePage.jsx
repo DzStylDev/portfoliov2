@@ -34,6 +34,7 @@ export default function HomePage() {
         break;
       case 'footerRef':
         element = footerRef.current
+      default:
         break;
     }
 
