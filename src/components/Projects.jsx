@@ -303,7 +303,7 @@ export default function Projects({ title }) {
                       }
                     </span>
                   </button>
-                  <a href={item.link} target='_blank' className='ml-2 bg-gradient-to-tr bg-primary-bg hover:bg-button-hover-bg cursor-pointer transition-all duration-300 ease-out text-[#ffffff] px-3 py-2 rounded-lg inline-flex items-center align-middle '>
+                  <a href={item.link} target='_blank' rel="noreferrer" className='ml-2 bg-gradient-to-tr bg-primary-bg hover:bg-button-hover-bg cursor-pointer transition-all duration-300 ease-out text-[#ffffff] px-3 py-2 rounded-lg inline-flex items-center align-middle '>
                     <FontAwesomeIcon icon={faGithub} fontSize={25} />
                   </a>
                 </div>
