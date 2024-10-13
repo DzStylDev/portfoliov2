@@ -15,6 +15,7 @@ import 'yet-another-react-lightbox/plugins/captions.css';
 import 'yet-another-react-lightbox/plugins/thumbnails.css';
 import "yet-another-react-lightbox/plugins/counter.css";
 import { faImages } from '@fortawesome/free-regular-svg-icons';
+import { motion } from 'framer-motion'
 
 export default function Projects({ title }) {
   const [toggle, setToggle] = useState(false)
@@ -214,7 +215,7 @@ export default function Projects({ title }) {
   }, [])
   let toggleButton = true
   return (
-    <div className='p-1 mt-2'>
+    <div className='py-6 px-8 md:px-32 text-white'>
       <div className='font-bold mb-2 flex items-center align-middle justify-between'>
         <span>{title}</span>
         {
@@ -310,7 +311,7 @@ export default function Projects({ title }) {
                 
               </div>
               <div className='mt-2 flex'>
-                { item.titre !== "RPGGames" && item.titre !== "Restaurant" && item.titre !== "Events"  && item.titre !== "Auto Ecole" ?
+              { item.titre !== "RPGGames" && item.titre !== "Restaurant" && item.titre !== "Events"  && item.titre !== "Auto Ecole" ?
                   <button onClick={() => deleteProject(item.keyID, item)} className='bg-red-400 px-5 py-2 rounded-md text-sm cursor-pointer transition-all duration-200 ease-in-out hover:text-red-500 hover:bg-white'>Supprimer ce project</button>
                   : 
                   ''

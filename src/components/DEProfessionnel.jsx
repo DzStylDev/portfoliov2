@@ -2,35 +2,41 @@ import { motion } from 'framer-motion'
 import React from 'react'
 export default function DEProfessionnel() {
   return (
-    <motion.div className='p-1 mt-2'
+    <motion.div className='py-6 px-8 md:px-32'
     initial={{
       opacity: 0,
+      y: -15
     }} 
     whileInView={{
       opacity: 1,
+      y: 45
     }}
     transition={{
       ease: 'easeIn',
       duration: 2,
-      delay: 3
+      delay: 5
     }}>
-      <div className='font-bold mb-2'>Mes Diplôme et mes expériences</div>
+      <div className='font-bold mb-2 text-white'>Mes Diplôme et mes expériences</div>
       
     <div className='flex flex-col md:flex-row w-full justify-between rounded-lg gap-2'>
         <motion.div
         initial={{
           opacity: 0,
-          width: "100%"
+          width: '100%'
         }} 
         whileInView={{
           opacity: 1,
-          width: "100%"
+          width: '100%'
+        }}
+        viewport={{
+          margin: "-200px",
+          once: true
         }}
         transition={{
           ease: 'easeIn',
-          // duration: 3,
-          // delay: 6
-        }} className='border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+          duration: 2,
+          delay: 3
+        }}>
           <div className='gap-2 flex h-full'>
             <div className='flex rounded-lg shadow-xl"
                 hover:opacity-50

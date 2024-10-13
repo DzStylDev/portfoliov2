@@ -1,5 +1,5 @@
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
-import {faLocationDot, faMobilePhone } from '@fortawesome/free-solid-svg-icons'
+import { faLocationDot, faMobilePhone } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
 import Swal from "sweetalert2"
@@ -50,7 +50,7 @@ export default function Contact() {
   };
   
   return (
-    <>
+    <div className='py-6 px-8 md:px-32 text-white'>
     <div className='mt-5 p-1'>
           <h1 className="text-1xl font-bold text-mintcream my-auto">Contacte-moi</h1>
           <div className="text-sm font-light text-[#5b85c0] pb-8 ">Envie de me recontrer ou de discuté avec moi</div>
@@ -114,6 +114,6 @@ export default function Contact() {
         </div>
       </div>
     </div>
-    </>
+    </div>
   )
 }

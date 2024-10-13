@@ -1,7 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { motion } from 'framer-motion'  
+import { motion } from 'framer-motion'
 import revealText from '../utils/revelText';
 import revelText from '../utils/revelText';
 import { faFilePdf } from '@fortawesome/free-regular-svg-icons';
@@ -31,32 +31,33 @@ export default function AProposDeMoi({ refSection }) {
       initial={{
       visibility: 'hidden',
       opacity: 0,
-      y: -29
+      y: 35
     }}
       animate={{
         visibility: 'visible',
         opacity: 100,
+        y: 79
       }}
       transition={{
-        ease: 'easeInOut',
-        duration: 5,
-        delay: 2
-      }} className='p-1 mt-20'>
+        ease: 'easeIn',
+        duration: 2
+      }} className='py-6 px-8 md:px-32'>
       <div className='flex'>
-        <p className="mb-3 mt-3 font-bold">A propos de moi</p>
+        <p className="mb-3 mt-3 font-bold text-white">A propos de moi</p>
       </div>
       <div>
         <div className='text-[.9rem] leading-7'>
           <motion.p
             initial="hidden"
             whileInView="reveal"
-            transition={{ staggerChildren: .02 }}
+            transition={{ staggerChildren: .01 }}
+            className='text-white'
           >
             {textChars.map((char, index) => (
               <motion.span
                 key={index}
                 transition={{
-                  duration: 0.5,
+                  duration: 0.2,
                 }}
                 variants={charVariants}
               >
@@ -67,7 +68,8 @@ export default function AProposDeMoi({ refSection }) {
           <motion.p
             initial="hidden"
             whileInView="reveal"  
-            transition={{ staggerChildren: .03 }}
+            transition={{ staggerChildren: .02 }}
+             className='text-white'
           >
             {citeChar.map((cite, index) => (
               <motion.cite
@@ -89,14 +91,14 @@ export default function AProposDeMoi({ refSection }) {
             download={true}
             href='../assets/Cv amine.pdf'
               className='inline-flex items-center justify-between min-w-40 gap-2 px-5 py-2 text-sm font-medium text-center text-white rounded-lg bg-button-bg hover:bg-button-hover-bg  transition-all ease-in-out delay-75'>
-                <div>Télécharger mon cv</div>
+                <div  className='text-white'>Télécharger mon cv</div>
                 <FontAwesomeIcon icon={faFilePdf} size='xl' />
               </motion.a>
           </div>
 
           <button>
             <div className='flex'>
-              <p className='mb-3 mt-3 font-bold'>Ou me trouver</p>
+              <p className='mb-3 mt-3 font-bold text-white'>Ou me trouver</p>
             </div>
             <div>
               <div className='flex'>

@@ -16,39 +16,39 @@ export default function HomePage() {
   const footerRef = useRef(null)
 
   const scrollToSection = (section) => {
-    const headerOffset = document.querySelector('.header').offsetHeight
-    let element;
     
     switch (section) {
       case 'about':
-        element = aboutRef.current
+        aboutRef.current.scrollIntoView({
+          behavior: 'smooth',
+        });
         break;
       case 'competences':
-        element = competencesRef.current
+        competencesRef.current.scrollIntoView({
+          behavior: 'smooth',
+        });
         break;
       case 'projects':
-        element = projectsRef.current
+        projectsRef.current.scrollIntoView({
+          behavior: 'smooth',
+        });
         break;
       case 'contact':
-        element = contactRef.current
+        contactRef.current.scrollIntoView({
+          behavior: 'smooth',
+        });
         break;
       case 'footerRef':
-        element = footerRef.current
+        footerRef.current.scrollIntoView({
+          behavior: 'smooth',
+        });
         break;
       default:
-    }
-
-    if (element) {
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset - headerOffset;
-      window.scrollTo({
-        top: elementPosition,
-        behavior: 'smooth',
-      });
     }
   };
 
   return (
-    <div className='font-pol1 text-white box-border p-4 h-full'>
+   <>
       <Header scrollToSection={scrollToSection} />
         
       <section>
@@ -73,8 +73,9 @@ export default function HomePage() {
 
       <section ref={footerRef}>
         <Footer />
-      </section>
-    </div>
-  )
+      </section> 
+
+      </>
+      ) 
 }
 
