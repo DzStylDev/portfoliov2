@@ -26,6 +26,7 @@ export default function Projects({ title }) {
   const [linkGitHub, setLinkGitHub] = useState("")
   const [member, setMember] = useState('')
   const [openGallerie, setOpenGallerie] = useState(null)
+  const [checkedValue, setCheckedValue] = useState(null);
 
   const iconMap = {
     faLaravel: faLaravel,
@@ -177,7 +178,9 @@ export default function Projects({ title }) {
 
     return files
   }
-
+  const handleCheckboxChange = (value) => {
+    setCheckedValue(value)
+  }
   useEffect(() => {
     const fetchProjects = async () => {
       const db = getDatabase(app)
@@ -336,7 +339,7 @@ export default function Projects({ title }) {
                 <div className="flex min-h-full justify-center p-4 text-center">
                   <DialogPanel
                     transition
-                    className="relative transform overflow-hidden rounded-lg bg-gray-800 text-left shadow-xl transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in sm:my-8 sm:w-full sm:max-w-lg data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95"
+                    className="relative transform overflow-hidden rounded-lg bg-gray-800 text-left shadow-xl transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in sm:my-16 sm:w-full sm:max-w-lg data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95"
                   >
                     <div className="bg-bg-gray-800 px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
                       <div className="sm:flex sm:items-start">
@@ -427,7 +430,7 @@ export default function Projects({ title }) {
                             <div className="flex justify-between items-center align-middle">
                               <ul className="grid gap-6 md:grid-cols-2 grid-cols-2" onChange={getMember}>
                                 <li>
-                                  <input type="checkbox" id="option-1" value="one" className="hidden peer" required="" />
+                                  <input type="checkbox" id="option-1" value="one" className="hidden peer" required="" onChange={() => handleCheckboxChange('one')} />
                                   <label htmlFor="option-1" className="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-white hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                                     <div className="block">
                                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-5">
@@ -438,7 +441,7 @@ export default function Projects({ title }) {
                                   </label>
                                 </li>
                                 <li>
-                                  <input type="checkbox" id="option-2" value="all" className="hidden peer" required="" />
+                                  <input type="checkbox" id="option-2" value="all" className="hidden peer" required="" onChange={() => handleCheckboxChange('all')} />
                                   <label htmlFor="option-2" className="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-white hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                                     <div className="block">
                                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
