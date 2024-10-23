@@ -336,7 +336,7 @@ export default function Projects({ title }) {
               />
 
               <div className="fixed inset-0 z-10 overflow-y-auto">
-                <div className="flex min-h-full justify-center p-4 text-center">
+                <div className="flex justify-center p-4 text-center">
                   <DialogPanel
                     transition
                     className="relative transform overflow-hidden rounded-lg bg-gray-800 text-left shadow-xl transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in sm:my-16 sm:w-full sm:max-w-lg data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95"
