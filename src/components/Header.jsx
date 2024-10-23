@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { motion } from "framer-motion"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 export default function Header({ scrollToSection }) {
 
   const [menuVisible, setMenuVisible] = useState(false)
