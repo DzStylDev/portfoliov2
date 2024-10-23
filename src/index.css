@@ -15,44 +15,6 @@ html{
 }
 
 body{
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* flex-grow: 1; */
-    /* align-items: center; */
-    /* justify-content: center;  */
     background-image:  linear-gradient(to right, #1f2937, #2e3f5c);
     overflow-x: hidden;
-}
-
-/* #root{
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    width: 70%;
-} */
-
-@media screen and (max-width: 1000px) {
-    /* .navbar__links {
-        flex-direction: column;     
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 2em;
-        background-color: #1f2937;
-    }
-    .navbar__links button {
-        display: flex;
-        justify-content: center;
-        padding: .9em .9em;
-        width: 50%;
-        background-color: #1f2937;
-        flex-wrap: nowrap;
-    }
-    .menu.show {
-        display: none;
-    } */
-    /* .header__div {
-        display: flex;
-        flex-direction: column; 
-    } */
 }
