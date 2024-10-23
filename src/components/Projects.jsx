@@ -430,7 +430,7 @@ export default function Projects({ title }) {
                             <div className="flex justify-between items-center align-middle">
                               <ul className="grid gap-6 md:grid-cols-2 grid-cols-2" onChange={getMember}>
                                 <li>
-                                  <input type="checkbox" id="option-1" value="one" className="hidden peer" required="" onChange={() => handleCheckboxChange('one')} />
+                                  <input type="checkbox" id="option-1" value="one" className="hidden peer" required="" onChange={() => handleCheckboxChange('one')} checked={checkedValue === "one"}/>
                                   <label htmlFor="option-1" className="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-white hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                                     <div className="block">
                                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-5">
@@ -441,7 +441,7 @@ export default function Projects({ title }) {
                                   </label>
                                 </li>
                                 <li>
-                                  <input type="checkbox" id="option-2" value="all" className="hidden peer" required="" onChange={() => handleCheckboxChange('all')} />
+                                  <input type="checkbox" id="option-2" value="all" className="hidden peer" required="" onChange={() => handleCheckboxChange('all')} checked={checkedValue === "all"} />
                                   <label htmlFor="option-2" className="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-white hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                                     <div className="block">
                                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
