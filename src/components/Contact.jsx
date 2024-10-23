@@ -90,16 +90,8 @@ export default function Contact() {
         </form> 
         <div className='w-full'>
        
-       <div className='bg-gray-800 rounded-xl p-4'>
-        <p className='text-section-title'>Let's Talk About Anything</p>
-        <p className='text-sm mb-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia praesentium vitae incidunt</p>
-
-            
-            <div className='flex items-center gap-5'>
-              <FontAwesomeIcon icon={faMobilePhone} color='mintcream' className='text-[1.4em]' />
-              <span>+33 04.51.23.56.90</span>
-            </div>
-            
+       <div className='bg-gray-800 rounded-xl p-4 flex flex-col justify-between gap-2'>
+          
             <div className='flex items-center gap-5'>
               <FontAwesomeIcon icon={faEnvelope} color='mintcream' className='text-[1.4em]' />
               <span>amine.meddour@epitech.eu</span>
