@@ -15,7 +15,6 @@ import 'yet-another-react-lightbox/plugins/captions.css';
 import 'yet-another-react-lightbox/plugins/thumbnails.css';
 import "yet-another-react-lightbox/plugins/counter.css";
 import { faImages } from '@fortawesome/free-regular-svg-icons';
-import { motion } from 'framer-motion';
 
 export default function Projects({ title }) {
   const [toggle, setToggle] = useState(false)

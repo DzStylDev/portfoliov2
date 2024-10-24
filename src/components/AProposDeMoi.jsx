@@ -5,7 +5,6 @@ import { motion } from 'framer-motion'
 import revealText from '../utils/revelText';
 import revelText from '../utils/revelText';
 import { faFilePdf } from '@fortawesome/free-regular-svg-icons';
-import Reveal from '../utils/Reveal';
 
 export default function AProposDeMoi({ refSection }) {
 
