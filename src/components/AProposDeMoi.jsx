@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import revealText from '../utils/revelText';
 import revelText from '../utils/revelText';
 import { faFilePdf } from '@fortawesome/free-regular-svg-icons';
+import Reveal from '../utils/Reveal';
 
 export default function AProposDeMoi({ refSection }) {
 
@@ -26,22 +27,9 @@ export default function AProposDeMoi({ refSection }) {
     }
   }
   return (
-    <motion.div 
+    <div 
       ref={refSection}
-      initial={{
-      visibility: 'hidden',
-      opacity: 0,
-      y: 35
-    }}
-      animate={{
-        visibility: 'visible',
-        opacity: 100,
-        y: 79
-      }}
-      transition={{
-        ease: 'easeIn',
-        duration: 2
-      }} className='py-6 px-8 md:px-32'>
+       className='py-6 px-8 md:px-32'>
       <div className='flex'>
         <p className="mb-3 mt-3 font-bold text-white">A propos de moi</p>
       </div>
@@ -86,14 +74,14 @@ export default function AProposDeMoi({ refSection }) {
           </motion.p>
 
 
-          <div className='mb-3 mt-2'>
-            <motion.a
+          <div className='mb-3 mt-6'>
+            <a
             download={true}
             href='../assets/Cv amine.pdf'
               className='inline-flex items-center justify-between min-w-40 gap-2 px-5 py-2 text-sm font-medium text-center text-white rounded-lg bg-button-bg hover:bg-button-hover-bg  transition-all ease-in-out delay-75'>
                 <div  className='text-white'>Télécharger mon cv</div>
                 <FontAwesomeIcon icon={faFilePdf} size='xl' />
-              </motion.a>
+              </a>
           </div>
 
           <button>
@@ -102,13 +90,13 @@ export default function AProposDeMoi({ refSection }) {
             </div>
             <div>
               <div className='flex'>
-              <motion.a
+              <a
             href='http://github.com/DzStylDev'
             target='_blank'
               className='inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white rounded-lg bg-button-bg hover:bg-button-hover-bg  transition-all ease-in-out delay-75 justify-between gap-2'>
                 <div>GitHub</div>
                 <FontAwesomeIcon icon={faGithub} size='xl' />
-              </motion.a>
+              </a>
               </div>
             </div>
 
@@ -116,6 +104,6 @@ export default function AProposDeMoi({ refSection }) {
 
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }

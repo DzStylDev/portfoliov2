@@ -24,43 +24,13 @@ export default function Competences() {
   return (
     
     <div className='py-6 px-8 md:px-32'>
-    <motion.div
-     initial={{
-      opacity: 0,
-      y: -15
-    }} 
-    whileInView={{
-      opacity: 1,
-      y: 45
-    }}
-    transition={{
-      ease: 'easeIn',
-      duration: 2,
-      delay: 3
-    }}
+    <div
 
      className='font-bold mb-2 text-white'>
       Compétences
-      </motion.div>
+      </div>
         
-    <motion.div
-      initial={{
-        opacity: 0,
-        y: -25
-      }} 
-      whileInView={{
-        opacity: 1,
-        y: 60
-      }}
-      viewport={{
-        margin: "-200px",
-        once: true
-      }}
-      transition={{
-        ease: 'easeIn',
-        duration: 2,
-        delay: 3
-      }}
+    <div
       className="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <motion.ul
          initial={{
@@ -156,7 +126,7 @@ export default function Competences() {
                 </div>
             </div>
         </div>
-    </motion.div>
+    </div>
 
 
    

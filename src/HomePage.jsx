@@ -6,6 +6,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import Reveal from './utils/Reveal';
 
 export default function HomePage() {
 
@@ -49,32 +50,45 @@ export default function HomePage() {
 
   return (
    <>
-      <Header scrollToSection={scrollToSection} />
+          <Header scrollToSection={scrollToSection} />
+
         
-      <section>
-        <AProposDeMoi refSection={aboutRef}/>
-      </section>
-      
-      <section ref={competencesRef}>
-        <Competences />
-      </section>
+              <Reveal>
+                <section>
+                    <AProposDeMoi refSection={aboutRef}/>
+                </section>
+              </Reveal>
 
-      <section>
-        <DEProfessionnel />
-      </section>
+              <Reveal>
+                <section ref={competencesRef}>
+                      <Competences />
+                </section>
+              </Reveal>
 
-      <section ref={projectsRef}>
-        <Projects title="Mes Projets" />
-      </section>
+            <Reveal>
+              <section>
+                  <DEProfessionnel />
+              </section>
+            </Reveal>
 
-      <section ref={contactRef}>
-        <Contact />
-      </section>
+       
+            <Reveal>
+          <section ref={projectsRef}>
+              <Projects title="Mes Projets" />
+          </section>
+            </Reveal>
 
-      <section ref={footerRef}>
-        <Footer />
-      </section> 
+            <Reveal>
+              <section ref={contactRef}>
+                  <Contact />
+              </section>
+             </Reveal>
 
+            <Reveal>
+              <section ref={footerRef}>
+                  <Footer />
+              </section>   
+            </Reveal>
       </>
       ) 
 }

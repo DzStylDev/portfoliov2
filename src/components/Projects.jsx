@@ -15,6 +15,7 @@ import 'yet-another-react-lightbox/plugins/captions.css';
 import 'yet-another-react-lightbox/plugins/thumbnails.css';
 import "yet-another-react-lightbox/plugins/counter.css";
 import { faImages } from '@fortawesome/free-regular-svg-icons';
+import { motion } from 'framer-motion';
 
 export default function Projects({ title }) {
   const [toggle, setToggle] = useState(false)
@@ -113,7 +114,6 @@ export default function Projects({ title }) {
           console.log("Fichiers trouvés :", items);
           const deletePromises = items.map(async (itemRef) => await deleteObject(itemRef));
 
-          // Attendre que toutes les suppressions soient terminées
           await Promise.all(deletePromises);
 
           console.log("Tous les fichiers dans le dossier ont été supprimés avec succès !");
@@ -218,7 +218,8 @@ export default function Projects({ title }) {
   let toggleButton = true
   return (
     <div className='py-6 px-8 md:px-32 text-white'>
-      <div className='font-bold mb-2 flex items-center align-middle justify-between'>
+      <div  
+    className='font-bold mb-2 flex items-center align-middle justify-between'>
         <span>{title}</span>
         {
           title === "Mes Projets" ? (
@@ -242,9 +243,9 @@ export default function Projects({ title }) {
      
       
         {projects.length > 0 && projects.map((item, index) => (
-          <div key={index} className='flex w-full flex-wrap bg-button-bg gap-5 justify-center h-full border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
-
-        <button  style={{ marginTop: '1em' }} onClick={() => setOpenGallerie(index)}>
+          <div
+            key={index} className='flex w-full flex-wrap bg-button-bg gap-5 justify-center h-full border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+        <button style={{ marginTop: '1em' }} onClick={() => setOpenGallerie(index)}>
         <FontAwesomeIcon icon={faImages} color='#4a596e' fontSize={30} className='text-[#4a596e] hover:text-blue-200 transition-all duration-300 ease-in-out' />
         </button>
 
@@ -430,10 +431,10 @@ export default function Projects({ title }) {
                             <div className="flex justify-between items-center align-middle">
                               <ul className="grid gap-6 md:grid-cols-2 grid-cols-2" onChange={getMember}>
                                 <li>
-                                  <input type="checkbox" id="option-1" value="one" className="hidden peer" required="" onChange={() => handleCheckboxChange('one')} checked={checkedValue === "one"}/>
+                                  <input type="checkbox" id="option-1" value="one" className="hidden peer" required="" onChange={() => handleCheckboxChange('one')} checked={checkedValue === "one"} />
                                   <label htmlFor="option-1" className="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-white hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                                     <div className="block">
-                                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-5">
+                                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-5" name='test'>
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
                                       </svg>
                                       <div className="w-full text-xs font-semibold">1 personne</div>
@@ -441,7 +442,7 @@ export default function Projects({ title }) {
                                   </label>
                                 </li>
                                 <li>
-                                  <input type="checkbox" id="option-2" value="all" className="hidden peer" required="" onChange={() => handleCheckboxChange('all')} checked={checkedValue === "all"} />
+                                  <input type="checkbox" id="option-2" value="all" className="hidden peer" required="" onChange={() => handleCheckboxChange('all')} checked={checkedValue === "all"}/>
                                   <label htmlFor="option-2" className="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-white hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                                     <div className="block">
                                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
