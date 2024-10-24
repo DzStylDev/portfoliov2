@@ -4,7 +4,6 @@ Portfolio <span style="color:orange">v.2</span>
     <p>Développer avec</p> 
     <span><img src="https://www.svgrepo.com/show/354259/react.svg" height=20></span>
 </div>
-E
 
 Liste des projets inclus **5** :
 # Projet RPGames
