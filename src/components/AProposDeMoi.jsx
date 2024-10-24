@@ -77,6 +77,7 @@ export default function AProposDeMoi({ refSection }) {
             <a
             download={true}
             href='../assets/Cv amine.pdf'
+            rel="noreferrer"
               className='inline-flex items-center justify-between min-w-40 gap-2 px-5 py-2 text-sm font-medium text-center text-white rounded-lg bg-button-bg hover:bg-button-hover-bg  transition-all ease-in-out delay-75'>
                 <div  className='text-white'>Télécharger mon cv</div>
                 <FontAwesomeIcon icon={faFilePdf} size='xl' />
@@ -92,6 +93,7 @@ export default function AProposDeMoi({ refSection }) {
               <a
             href='http://github.com/DzStylDev'
             target='_blank'
+            rel="noreferrer"
               className='inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white rounded-lg bg-button-bg hover:bg-button-hover-bg  transition-all ease-in-out delay-75 justify-between gap-2'>
                 <div>GitHub</div>
                 <FontAwesomeIcon icon={faGithub} size='xl' />

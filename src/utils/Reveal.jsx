@@ -12,7 +12,7 @@ export default function Reveal({ children }) {
         if(isInView){
             mainControls.start('visible')
         }
-    }, [isInView])
+    }, [isInView, mainControls])
     return (
         <div ref={ref}>
             <motion.div
