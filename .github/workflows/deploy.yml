@@ -27,11 +27,6 @@ jobs:
       - run: npm test
       - name: Deploy React Portfolio app
         run: curl -X POST -d {} ${{ secrets.NETLIFY_BUILD_HOOK }}
-      - name: Publish to npm
-        if: github.ref == 'refs/heads/main'
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
   # publish-npm:
   #   needs: build
   #   runs-on: ubuntu-latest
