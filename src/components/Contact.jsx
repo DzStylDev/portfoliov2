@@ -57,7 +57,7 @@ export default function Contact() {
     </div>  
     <div className='rounded-sm p-1'>
       <div className="flex flex-col md:flex-row  w-full mx-auto rounded-2xl gap-5">
-        <form className="w-full grid grid-cols-1 gap-5 bg-gray-800 rounded-xl p-4" role="form" onSubmit={onSubmit} method='POST'>
+        <form className="w-full grid grid-cols-1 gap-5 bg-gray-800 rounded-xl p-4"  onSubmit={onSubmit} method='POST'>
          <div className='flex gap-2 w-full'> 
           <input type="hidden" name="access_key" value={process.env.REACT_APP_ACCESS_KEY} className='w-full' />
             <div className="pb-6 w-full">
