@@ -1,5 +1,5 @@
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
-import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import { faLocationDot, faMobilePhone } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
 import Swal from "sweetalert2"
@@ -82,7 +82,7 @@ export default function Contact() {
             <div className="pb-6">
             <label htmlFor="message" className="block mb-2 text-sm font-medium text-mintcream">Message</label>
             <div className="relative text-gray-400"><span className="absolute inset-y-0 left-0 flex items-center p-1 pl-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></span>
-              <input type="text" name="message" id="message" placeholder="Message" className="pl-12 mb-2 bg-gray-50 text-gray-600 border focus:border-transparent border-gray-300 sm:text-sm rounded-lg ring ring-transparent focus:ring-1 focus:outline-none focus:ring-gray-400 block w-full p-2.5 rounded-l-lg py-3 px-4" autoComplete="new-message" onChange={(e) => setMessage(e.currentTarget.value)}/>
+              <input type="text" name="message" id="message" placeholder="Enter Message" className="pl-12 mb-2 bg-gray-50 text-gray-600 border focus:border-transparent border-gray-300 sm:text-sm rounded-lg ring ring-transparent focus:ring-1 focus:outline-none focus:ring-gray-400 block w-full p-2.5 rounded-l-lg py-3 px-4" autoComplete="new-message" onChange={(e) => setMessage(e.currentTarget.value)}/>
             </div>
           </div>
           <button type="submit" className="w-full text-[#ffffff] bg-button-hover-bg hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-6 transition-all duration-75 ease-out">Envoyé</button>
@@ -98,8 +98,8 @@ export default function Contact() {
             </div>
             
             <div className='flex items-center gap-5'>
-              <FontAwesomeIcon icon={faLocationDot} color='mintcream' className='text-[1.4em]' />
-              <span>34 rue Linois , 75015 Paris</span>
+              <FontAwesomeIcon icon={faMobilePhone} color='mintcream' className='text-[1.4em]' />
+              <span>+33 04 45 21 56 36</span>
             </div>
 
        </div>
