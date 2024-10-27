@@ -76,7 +76,7 @@ export default function AProposDeMoi({ refSection }) {
           <div className='mb-3 mt-6'>
             <a
             download={true}
-            href='../assets/Cv amine.pdf'
+            href='../assets/Cv amine v2.pdf'
             rel="noreferrer"
               className='inline-flex items-center justify-between min-w-40 gap-2 px-5 py-2 text-sm font-medium text-center text-white rounded-lg bg-button-bg hover:bg-button-hover-bg  transition-all ease-in-out delay-75'>
                 <div  className='text-white'>Télécharger mon cv</div>
