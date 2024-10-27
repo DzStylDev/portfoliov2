@@ -57,11 +57,11 @@ export default function Contact() {
     </div>  
     <div className='rounded-sm p-1'>
       <div className="flex flex-col md:flex-row  w-full mx-auto rounded-2xl gap-5">
-        <form className="w-full grid grid-cols-1 gap-5 bg-gray-800 rounded-xl p-4" onSubmit={onSubmit} method='POST'>
+        <form className="w-full grid grid-cols-1 gap-5 bg-gray-800 rounded-xl p-4" role="form" onSubmit={onSubmit} method='POST'>
          <div className='flex gap-2 w-full'> 
           <input type="hidden" name="access_key" value={process.env.REACT_APP_ACCESS_KEY} className='w-full' />
             <div className="pb-6 w-full">
-              <label htmlFor="prenom" className="block mb-2 text-sm font-medium text-mintcream">Enter Name</label>
+              <label htmlFor="prenom" className="block mb-2 text-sm font-medium text-mintcream">Name</label>
               <div className="relative text-gray-400"><span className="absolute inset-y-0 left-0 flex items-center p-1 pl-3"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
               </svg>
