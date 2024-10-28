@@ -180,7 +180,7 @@ export default function Projects({ title }) {
   const handleCheckboxChange = (value) => {
     setCheckedValue(value)
   }
-  useEffect(() => {
+  /**useEffect(() => {
     const fetchProjects = async () => {
       const db = getDatabase(app)
       const refDB = dbRef(db, 'projects')
@@ -212,12 +212,13 @@ export default function Projects({ title }) {
           setProjects(project)
       }
     };
-
-    const unsubscribe = onValue(projectsRef, (snapshot) => {
+**/
+   useEffect(() => { 
+  const unsubscribe = onValue(projectsRef, (snapshot) => {
       const data = snapshot.val();
       if (data) {
-        console.log(Object.keys(data))
-        setProjects(Object.keys(data).map(key => ({ id: key, ...data[key] })));
+        console.log(data)
+        //setProjects(Object.keys(data).map(key => ({ id: key, ...data[key] })));
       }
       return () => unsubscribe();
     })
