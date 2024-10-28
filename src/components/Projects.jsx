@@ -214,7 +214,7 @@ export default function Projects({ title }) {
     };
     fetchProjects()
   }, [])
-
+useEffect(() => {
    // Écoute en temps réel pour les mises à jour
     const unsubscribe = onValue(projectsRef, (snapshot) => {
       const data = snapshot.val();
