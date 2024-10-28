@@ -211,7 +211,7 @@ export default function Projects({ title }) {
         setProjects(project)
       }
     };
-
+    console.log(project)
     fetchProjects()
   }, [])
   let toggleButton = true
