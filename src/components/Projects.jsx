@@ -180,11 +180,11 @@ export default function Projects({ title }) {
   const handleCheckboxChange = (value) => {
     setCheckedValue(value)
   }
-  /**useEffect(() => {
+  useEffect(() => {
     const fetchProjects = async () => {
       const db = getDatabase(app)
       const refDB = dbRef(db, 'projects')
-      //const snapshot = await get(refDB)
+      const snapshot = await get(refDB)
 
      if (snapshot.exists()) {
           
@@ -212,19 +212,7 @@ export default function Projects({ title }) {
           setProjects(project)
       }
     };
-**/
-  const db = getDatabase(app)
-  const refDB = dbRef(db, 'projects')
-   useEffect(() => { 
-  const unsubscribe = onValue(refDB , (snapshot) => {
-      const data = snapshot.val();
-      if (data) {
-        console.log(data)
-        setProjects(Object.keys(data).map(key => ({ id: key, ...data[key] })));
-      }
-      return () => unsubscribe();
-    })
-    //fetchProjects()
+    fetchProjects()
   }, [])
 
   let toggleButton = true
