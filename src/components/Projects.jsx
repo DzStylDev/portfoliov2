@@ -184,31 +184,34 @@ export default function Projects({ title }) {
     const fetchProjects = async () => {
       const db = getDatabase(app)
       const refDB = dbRef(db, 'projects')
-      const snapshot = await get(refDB)
+      //const snapshot = await get(refDB)
 
-      if (snapshot.exists()) {
-        let idKeys = Object.keys(snapshot.val())
-        let projects = Object.values(snapshot.val())
-        let getAllProject = await readProjectFile(projects)
+     if (snapshot.exists()) {
+        const unsubscribe = onValue(refDB, (snapshot) => {
+          
+          let idKeys = Object.keys(snapshot.val())
+          let projects = Object.values(snapshot.val())
+          let getAllProject = await readProjectFile(projects)
 
-        let projectsAll = getAllProject
+          let projectsAll = getAllProject
 
 
-        let project = projects.map((project, index) => { 
-          return {
-            keyID: idKeys[index],
-            titre: project.titre,
-            description: project.description,
-            checkGallerie: projectsAll[project.titre + '_images'],
-            icon: project.icon,
-            color: project.color,
-            link: project.link,
-            member: project.member
-          }
-        })
+          let project = projects.map((project, index) => { 
+            return {
+              keyID: idKeys[index],
+              titre: project.titre,
+              description: project.description,
+              checkGallerie: projectsAll[project.titre + '_images'],
+              icon: project.icon,
+              color: project.color,
+              link: project.link,
+              member: project.member
+            }
+          })
 
-       console.log(project)  
-        setProjects(project)
+        
+          setProjects(project)
+        }
       }
     };
     fetchProjects()
