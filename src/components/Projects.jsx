@@ -212,20 +212,17 @@ export default function Projects({ title }) {
           setProjects(project)
       }
     };
-    fetchProjects()
-  }, [])
-useEffect(() => {
-   // Écoute en temps réel pour les mises à jour
+
     const unsubscribe = onValue(projectsRef, (snapshot) => {
       const data = snapshot.val();
       if (data) {
         console.log(Object.keys(data))
         setProjects(Object.keys(data).map(key => ({ id: key, ...data[key] })));
       }
-    });
-
-    return () => unsubscribe();
-  }, []);
+      return () => unsubscribe();
+    })
+    fetchProjects()
+  }, [])
 
   let toggleButton = true
   return (
