@@ -37,9 +37,14 @@ les icones svg on une couleur par défault
 
 
 Liste des icones que vous pouvez mettre en couleur : 
+    Laravel,
+    Symfony,
+    Bootstrap,
+    JS: faJs,
+    Java: faJava,
+    Php: faPhp,
+    Docker: faDocker,
 
-
-Lien :
 
 [Cahier des charges](https://github.com/DzStylDev/cahier_des_charges.git)
 
