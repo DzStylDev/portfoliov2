@@ -34,6 +34,11 @@ les icons svg on une couleur par défault
 
 Chaque projet que vous créer via une modal sera enrengistrer dans firebase , ainsi que les images assigné
 
+Il y'a deux icon , ue icone qui provient de fontawesome icon ou la couleur est paramètrable via la modal
+et l'autre icon qui est un svg ou l'icone n'est pas paramètrable 
+
+Liste des icones que vous pouvez mettre en couleur : 
+
 
 Lien :
 
