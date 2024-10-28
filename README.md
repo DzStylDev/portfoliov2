@@ -26,16 +26,15 @@ Quizz interactif
 chaque lien des projets peuvent être accessible grace à l'icone github que vous travez assigner à chaque projet dans la section projet
 
 ## Fonctionnalité
-J'ai mis une fonctionnalité à jour qui vous premet d'ajouter un projet temporaire au dela des 5 projet que j'ai ajouter et qui ne sont pas supprimable par sécurité
-Les projets que vous ajoutez peuvent être supprimer grâce au boutton "supprimer le projet"
+J'ai mis une fonctionnalité à jour qui vous permet d'ajouter un projet temporaire au dela des 5 projet que j'ai ajouter et qui ne sont pas supprimable par sécurité
 
-Vous pouvez spécifier une couleur pour l'icone provenant de fontAwesome ,
-les icons svg on une couleur par défault
+Les projets que vous ajoutez peuvent être supprimer grâce au boutton "supprimer le projet"
 
 Chaque projet que vous créer via une modal sera enrengistrer dans firebase , ainsi que les images assigné
 
-Il y'a deux icon , ue icone qui provient de fontawesome icon ou la couleur est paramètrable via la modal
-et l'autre icon qui est un svg ou l'icone n'est pas paramètrable 
+Vous pouvez spécifier une couleur pour l'icone provenant de fontAwesome ,
+les icones svg on une couleur par défault
+
 
 Liste des icones que vous pouvez mettre en couleur : 
 
