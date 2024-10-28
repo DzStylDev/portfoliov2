@@ -216,15 +216,15 @@ export default function Projects({ title }) {
   const db = getDatabase(app)
   const refDB = dbRef(db, 'projects')
    useEffect(() => { 
-  const unsubscribe = onValue(projectsRef, (snapshot) => {
+  const unsubscribe = onValue(refDB , (snapshot) => {
       const data = snapshot.val();
       if (data) {
         console.log(data)
-        //setProjects(Object.keys(data).map(key => ({ id: key, ...data[key] })));
+        setProjects(Object.keys(data).map(key => ({ id: key, ...data[key] })));
       }
       return () => unsubscribe();
     })
-    fetchProjects()
+    //fetchProjects()
   }, [])
 
   let toggleButton = true
