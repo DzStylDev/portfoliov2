@@ -187,7 +187,6 @@ export default function Projects({ title }) {
       //const snapshot = await get(refDB)
 
      if (snapshot.exists()) {
-        const unsubscribe = onValue(refDB, (snapshot) => {
           
           let idKeys = Object.keys(snapshot.val())
           let projects = Object.values(snapshot.val())
@@ -211,11 +210,23 @@ export default function Projects({ title }) {
 
         
           setProjects(project)
-        }
       }
     };
     fetchProjects()
   }, [])
+
+   // Écoute en temps réel pour les mises à jour
+    const unsubscribe = onValue(projectsRef, (snapshot) => {
+      const data = snapshot.val();
+      if (data) {
+        console.log(Object.keys(data))
+        setProjects(Object.keys(data).map(key => ({ id: key, ...data[key] })));
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
+
   let toggleButton = true
   return (
     <div className='py-6 px-8 md:px-32 text-white'>
