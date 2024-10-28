@@ -213,6 +213,8 @@ export default function Projects({ title }) {
       }
     };
 **/
+  const db = getDatabase(app)
+  const refDB = dbRef(db, 'projects')
    useEffect(() => { 
   const unsubscribe = onValue(projectsRef, (snapshot) => {
       const data = snapshot.val();
