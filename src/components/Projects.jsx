@@ -180,6 +180,22 @@ export default function Projects({ title }) {
   const handleCheckboxChange = (value) => {
     setCheckedValue(value)
   }
+  const processProjects = useCallback(async (snapshotData) => {
+    const idKeys = Object.keys(snapshotData);
+    const projects = Object.values(snapshotData);
+    const getAllProject = await readProjectFile(projects);
+
+    return projects.map((project, index) => ({
+      keyID: idKeys[index],
+      titre: project.titre,
+      description: project.description,
+      checkGallerie: getAllProject[project.titre + '_images'],
+      icon: project.icon,
+      color: project.color,
+      link: project.link,
+      member: project.member,
+    }));
+}, []);
   useEffect(() => {
     const fetchProjects = async () => {
       const db = getDatabase(app)
@@ -199,26 +215,11 @@ export default function Projects({ title }) {
     };
     
     fetchProjects()
-  }, [])
+  }, [processProjects])
 
   let toggleButton = true
 
-  const processProjects = async (snapshotData) => {
-    const idKeys = Object.keys(snapshotData);
-    const projects = Object.values(snapshotData);
-    const getAllProject = await readProjectFile(projects);
 
-    return projects.map((project, index) => ({
-      keyID: idKeys[index],
-      titre: project.titre,
-      description: project.description,
-      checkGallerie: getAllProject[project.titre + '_images'],
-      icon: project.icon,
-      color: project.color,
-      link: project.link,
-      member: project.member,
-    }));
-  };
   return (
     <div className='py-6 px-8 md:px-32 text-white'>
       <div  
