@@ -30,7 +30,8 @@ J'ai mis une fonctionnalité à jour qui vous permet d'ajouter un projet tempora
 
 Les projets que vous ajoutez peuvent être supprimer grâce au boutton "supprimer le projet"
 
-Chaque projet que vous créer via une modal sera enrengistrer dans firebase , ainsi que les images assigné
+Chaque projet que vous créer via une modal sera enrengistrer dans firebase , ainsi que les images assigné.
+Les projet sont ajouter dynamiquement et afficher dans la section , vous devrez raffraichir la page pour voir la gallerie se mettre à jour
 
 Vous pouvez spécifier une couleur pour l'icone provenant de fontAwesome ,
 les icones svg on une couleur par défault
