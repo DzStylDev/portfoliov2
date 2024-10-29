@@ -187,35 +187,38 @@ export default function Projects({ title }) {
       const snapshot = await get(refDB)
 
      if (snapshot.exists()) {
-          
-          let idKeys = Object.keys(snapshot.val())
-          let projects = Object.values(snapshot.val())
-          let getAllProject = await readProjectFile(projects)
-
-          let projectsAll = getAllProject
-
-
-          let project = projects.map((project, index) => { 
-            return {
-              keyID: idKeys[index],
-              titre: project.titre,
-              description: project.description,
-              checkGallerie: projectsAll[project.titre + '_images'],
-              icon: project.icon,
-              color: project.color,
-              link: project.link,
-              member: project.member
-            }
-          })
-
-        
-          setProjects(project)
+         const data = await processProjects(snapshot.val());
+          setProjects(data)
       }
+       onValue(refDB, async (snapshot) => {
+        if (snapshot.exists()) {
+          const data = await processProjects(snapshot.val());
+          setProjects(data);
+        }
+      });
     };
+    
     fetchProjects()
   }, [])
 
   let toggleButton = true
+
+  const processProjects = async (snapshotData) => {
+    const idKeys = Object.keys(snapshotData);
+    const projects = Object.values(snapshotData);
+    const getAllProject = await readProjectFile(projects);
+
+    return projects.map((project, index) => ({
+      keyID: idKeys[index],
+      titre: project.titre,
+      description: project.description,
+      checkGallerie: getAllProject[project.titre + '_images'],
+      icon: project.icon,
+      color: project.color,
+      link: project.link,
+      member: project.member,
+    }));
+  };
   return (
     <div className='py-6 px-8 md:px-32 text-white'>
       <div  
