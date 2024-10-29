@@ -217,6 +217,36 @@ export default function Projects({ title }) {
     fetchProjects()
   }, [processProjects])
 
+  const ProjectLightbox = ({ item }) => {
+    const [slides, setSlides] = useState(item.checkGallerie);
+  
+    // Met à jour slides quand item.checkGallerie change
+    useEffect(() => {
+      setSlides(item.checkGallerie);
+    }, [item.checkGallerie]);
+  
+    return (
+      <Lightbox 
+          plugins={[ Download, Fullscreen, Zoom, Thumbnails, Counter]}
+          counter={{ 
+            container: { 
+              style: { 
+                top: 0, 
+                bottom: 0 
+              } 
+            } 
+          }}
+          captions={{
+            showToggle: true,
+            descriptionTextAlign: 'end'
+          }}
+          open={true}
+          close={() => setOpenGallerie(null)}  
+          slides={slides}
+        />
+           )
+    }
+
   let toggleButton = true
 
 
@@ -254,24 +284,7 @@ export default function Projects({ title }) {
         </button>
 
         { openGallerie === index && (
-          <Lightbox 
-              plugins={[ Download, Fullscreen, Zoom, Thumbnails, Counter]}
-              counter={{ 
-                container: { 
-                  style: { 
-                    top: 0, 
-                    bottom: 0 
-                  } 
-                } 
-              }}
-              captions={{
-                showToggle: true,
-                descriptionTextAlign: 'end'
-              }}
-              open={true}
-              close={() => setOpenGallerie(null)}  
-              slides={item.checkGallerie}
-            />
+           <ProjectLightbox item={item} />
           )}
             <div className="flex flex-col rounded-lg w-full p-5">
               <div className="text-2xl font-bold text-white pb-6">
