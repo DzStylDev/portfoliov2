@@ -9,8 +9,6 @@ export default function DEProfessionnel() {
        
           <div className='gap-2 flex h-full'>
             <div className='flex rounded-lg shadow-xl"
-                hover:opacity-50
-                hover:shadow-md 
                 bg-button-bg
                 py-6 px-5
                 w-full
@@ -68,8 +66,6 @@ export default function DEProfessionnel() {
         className='border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 w-full'>
           <div className='gap-2 flex'>
             <div className='flex shadow-xl"
-                hover:opacity-50
-                hover:shadow-md 
                 px-5 py-6
                 rounded-lg
                 bg-button-bg
