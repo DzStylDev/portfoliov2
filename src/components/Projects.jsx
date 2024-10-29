@@ -199,7 +199,7 @@ export default function Projects({ title }) {
     };
     
     fetchProjects()
-  }, [processProjects])
+  }, [])
 
   let toggleButton = true
 
