@@ -200,18 +200,19 @@ export default function Projects({ title }) {
     const fetchProjects = async () => {
       const db = getDatabase(app)
       const refDB = dbRef(db, 'projects')
-      const snapshot = await get(refDB)
 
-     if (snapshot.exists()) {
-         const data = await processProjects(snapshot.val());
-          setProjects(data)
-      }
-       onValue(refDB, async (snapshot) => {
+      const loadProjects = async (snapshot) => {
         if (snapshot.exists()) {
           const data = await processProjects(snapshot.val());
           setProjects(data);
         }
-      });
+      };
+      const snapshot = await get(refDB)
+      await loadProjects(snapshot)
+
+      onValue(refDB, async (snapshot) => {
+        await loadProjects(snapshot)
+    });
     };
     
     fetchProjects()
@@ -220,9 +221,10 @@ export default function Projects({ title }) {
   const ProjectLightbox = ({ item }) => {
     const [slides, setSlides] = useState(item.checkGallerie);
   
-    // Met à jour slides quand item.checkGallerie change
     useEffect(() => {
-      setSlides(item.checkGallerie);
+      if (item.checkGallerie) {
+        setSlides(item.checkGallerie);
+      }
     }, [item.checkGallerie]);
   
     return (
