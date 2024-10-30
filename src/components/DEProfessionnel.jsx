@@ -66,40 +66,14 @@ export default function DEProfessionnel() {
                   <div className="flex flex-col justify-center">
                       
                       <div className="py-2">
-                        <p className="text-white text-sm font-bold">Stage de 8 semaines en Electrotechnique à Energilec</p>
-                        <p className="text-gray-400 text-xs mt-2">2018</p>
+                        <p className="text-white text-sm font-bold">ALPHALIVES</p>
+                        <p className="text-gray-400 text-xs mt-2">2024</p>
                         <p className="text-gray-400 text-xs mt-2">Compréhension d'un schéma éléctrique</p>                          
                         <p>Saint-Cloud</p>
                         <div className="border-b-[#324b76] border mt-2"></div>
 
                       </div>
-
-                      <div className="">
-                        <p className="text-white text-sm font-bold"> Stage de 8 semaines en Electrotechnique à Sarl Satlec</p>
-                        <p className="text-gray-400 text-xs mt-2">2017</p>
-                        <p className="text-gray-400 text-xs mt-2">Installation des lampes . Cablage éléctrique</p>
-                        <p>Paris</p>
-                        <div className="border-b-[#324b76] border mt-2"></div>
-                      </div>
-                      
-                      <div className="mt-2">
-                        <p className="text-white text-sm font-bold">Stage de 6 semaines en Electronique à NK Electronique</p>
-                        <p className="text-gray-400 text-xs mt-2">2015</p>
-                        <p className="text-gray-400 text-xs mt-2">Démontage d'ordinateurs et de télévisions</p>
-                          <p>Paris</p>
-                        <div className="border-b-[#324b76] border mt-2"></div>
-
-                      </div>
-
-                      <div className="mt-2">
-                        <p className="text-white text-sm font-bold">Stage de 6 semaines en électrotechnique à SBD (Self blanc drug)</p>
-                        <p className="text-gray-400 text-xs mt-2">2015</p>
-                        <p className="text-gray-400 text-xs mt-2">Réparation des laveries</p>
-                          <p>Paris</p>
-                        <div className="border-b-[#324b76] border mt-2"></div>
-
-                      </div>
-                      
+                     
                   </div>
 
                 </div>
