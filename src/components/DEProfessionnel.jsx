@@ -68,6 +68,7 @@ export default function DEProfessionnel() {
                       <div className="py-2">
                         <p className="text-white text-sm font-bold">ALTERNANT CHEZ ALPHALIVES</p>
                         <p className="text-gray-400 text-xs mt-2">2023 / 2024</p>
+                         <img src="../assets/images/alphalives.svg" alt='webacademy-img' />
                         <ul>
                           <li className="text-gray-400 text-xs mt-2">Création de commande laravel </li>
                           <li className="text-gray-400 text-xs mt-2">Ajout de formulaire</li>
