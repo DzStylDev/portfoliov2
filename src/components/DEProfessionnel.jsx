@@ -69,10 +69,22 @@ export default function DEProfessionnel() {
                         <p className="text-white text-sm font-bold">ALTERNANT CHEZ ALPHALIVES</p>
                         <p className="text-gray-400 text-xs mt-2">2023 / 2024</p>
                         <ul>
-                          <li className="text-gray-400 text-xs mt-2">Compréhension d'un schéma éléctrique</li>
-                          <li className="text-gray-400 text-xs mt-2">Compréhension d'un schéma éléctrique</li>
-                          <li className="text-gray-400 text-xs mt-2">Compréhension d'un schéma éléctrique</li>
-                          <li className="text-gray-400 text-xs mt-2">Compréhension d'un schéma éléctrique</li>
+                          <li className="text-gray-400 text-xs mt-2">Création de commande laravel </li>
+                          <li className="text-gray-400 text-xs mt-2">Ajout de formulaire</li>
+                          <li className="text-gray-400 text-xs mt-2">Transmission de donnée avec PHP</li>
+                          <li className="text-gray-400 text-xs mt-2">Gestion de requête sql</li>
+                          <li className="text-gray-400 text-xs mt-2">Création de composant</li>
+                          <li className="text-gray-400 text-xs mt-2">Clean code</li>
+                          <li className="text-gray-400 text-xs mt-2">Création de script laravel</li>
+                          <li className="text-gray-400 text-xs mt-2">Création de PDF avec Html2Pdf</li>
+                          <li className="text-gray-400 text-xs mt-2">Création de rubrique et de sous rubrique</li>
+                          <li className="text-gray-400 text-xs mt-2">export excel </li>
+                          <li className="text-gray-400 text-xs mt-2">Gestion des routes , controller , vues , base de donnée</li>
+                          <li className="text-gray-400 text-xs mt-2">Génération d’un JWT TOKEN</li>
+                          <li className="text-gray-400 text-xs mt-2">Création d’api </li>
+                          <li className="text-gray-400 text-xs mt-2">Création de map avec OpenStreetMap et Leaflet Js</li>
+                          <li className="text-gray-400 text-xs mt-2">Gestion de condition en laravel</li>
+                          <li className="text-gray-400 text-xs mt-2">Gestion d’envoi d’email avec mailpit</li>
                         </ul>                          
                         <div className="border-b-[#324b76] border mt-2"></div>
 
