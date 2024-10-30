@@ -61,15 +61,19 @@ export default function DEProfessionnel() {
                 w-full'>
               <div className="flex flex-col py-2 w-full">
                 <div className=" text-[#ffffff]">
-                  <div className='font-bold mb-2 text-xl' >Mes Expériences</div>
+                  <div className='font-bold mb-2 text-xl' >Expériences</div>
 
                   <div className="flex flex-col justify-center">
                       
                       <div className="py-2">
                         <p className="text-white text-sm font-bold">ALTERNANT CHEZ ALPHALIVES</p>
                         <p className="text-gray-400 text-xs mt-2">2023 / 2024</p>
-                        <p className="text-gray-400 text-xs mt-2">Compréhension d'un schéma éléctrique</p>                          
-                        <p>Saint-Cloud</p>
+                        <ul>
+                          <li className="text-gray-400 text-xs mt-2">Compréhension d'un schéma éléctrique</li>
+                          <li className="text-gray-400 text-xs mt-2">Compréhension d'un schéma éléctrique</li>
+                          <li className="text-gray-400 text-xs mt-2">Compréhension d'un schéma éléctrique</li>
+                          <li className="text-gray-400 text-xs mt-2">Compréhension d'un schéma éléctrique</li>
+                        </ul>                          
                         <div className="border-b-[#324b76] border mt-2"></div>
 
                       </div>
