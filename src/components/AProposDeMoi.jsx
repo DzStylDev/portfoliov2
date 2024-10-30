@@ -9,8 +9,7 @@ import { faFilePdf } from '@fortawesome/free-regular-svg-icons';
 export default function AProposDeMoi({ refSection }) {
 
   let text = `
-    J'ai 26 ans , je développe depuis 4 ans et je suis en deuxième année de web@academie
-    J'ai commencé par développer des plugins minecraft, des bots discord et quelques sites (front-end, back-end)
+    J'ai 26 ans , je développe depuis 4 ans et je suis en deuxième année à la web@academie.
   `
   let cite = "Travailleur , autonome et motivé , possèdant une très bonne faculté d'adaptation et un sens relationnel développé"
 
