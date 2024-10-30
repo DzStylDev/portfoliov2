@@ -32,19 +32,8 @@ export default function DEProfessionnel() {
                       </div>
 
                       <div className="">
-                        <p className="text-white text-sm font-bold">BAC PRO Electrotechnique</p>
+                        <p className="text-white text-sm font-bold">BAC  Electrotechnique</p>
                         <p className="text-gray-400 text-xs mt-2">2018 / 2019</p>
-                        <div className="flex items-center align-middle gap-1">
-                          <p>Lycée Louis Armand</p>
-                          <p>- Paris</p>
-                        </div>
-                        <div className="border-b-[#324b76] border mt-2"></div>
-
-                      </div>
-                      
-                      <div className="mt-2">
-                        <p className="text-white text-sm font-bold">BEP Electrotechnique</p>
-                        <p className="text-gray-400 text-xs mt-2">2016 / 2017</p>
                         <div className="flex items-center align-middle gap-1">
                           <p>Lycée Louis Armand</p>
                           <p>- Paris</p>
