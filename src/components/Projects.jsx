@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBootstrap , faGithub, faJava, faLaravel, faPhp, faSymfony, faJs, faDocker } from '@fortawesome/free-brands-svg-icons';
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react';
 import { PlusIcon } from '@heroicons/react/24/solid';
-import { getDatabase, push, ref as dbRef, set, get, remove , onValue } from 'firebase/database'
+import { getDatabase, push, ref as dbRef, set, get, remove,onValue } from 'firebase/database'
 import { getDownloadURL, list, ref as storageRef, uploadBytes, getStorage, listAll , deleteObject} from 'firebase/storage'
 import app, { imageDB } from "../firebaseConfig"
 import toast from 'react-hot-toast';
@@ -15,7 +15,23 @@ import 'yet-another-react-lightbox/plugins/captions.css';
 import 'yet-another-react-lightbox/plugins/thumbnails.css';
 import "yet-another-react-lightbox/plugins/counter.css";
 import { faImages } from '@fortawesome/free-regular-svg-icons';
+import Swal from "sweetalert2"
 
+import { motion } from 'framer-motion';
+const fadeAnimationVariants = {
+  initial: {
+    opacity: 0,
+    y: 100
+  },
+  animate: (index) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.05 * index,
+      duration: 1
+    }
+  })
+}
 export default function Projects({ title }) {
   const [toggle, setToggle] = useState(false)
   const [titre, setTitre] = useState('')
@@ -73,7 +89,10 @@ export default function Projects({ title }) {
       link: linkGitHub,
       member: member
     }).then(() => {
-      toast.success('Le projet à était créer avec success')
+      Swal.fire({
+        title: `Le projet ${titre} à était créer avec success`,
+        icon: 'success'
+      })
       toggleProject()
     }).catch(error => {
       console.log(error.message)
@@ -96,7 +115,7 @@ export default function Projects({ title }) {
   const deleteProject = async (keyItem, item) => {
 
     if (!keyItem) {
-      console.error("Erreur : keyItem est undefined ou null");
+      console.error("Erreur : keyItem est non définit ou null");
       return;
   }
     const db = getDatabase(app)
@@ -123,8 +142,12 @@ export default function Projects({ title }) {
 
     remove(getProjectDB)
      .then(() => {
-         console.log("Projet supprimé avec succès");
-         toast.success('Le projet à était supprimer avec success')
+         console.log(`Projet ${item.titre} supprimé avec succèss`);
+
+         Swal.fire({
+          title: `Le projet ${item.titre} à était supprimer avec success`,
+          icon: 'success'
+        })
      })
      .catch((error) => {
          console.error("Erreur lors de la suppression du projet :", error);
@@ -180,7 +203,7 @@ export default function Projects({ title }) {
   const handleCheckboxChange = (value) => {
     setCheckedValue(value)
   }
-  const processProjects = useCallback(async (snapshotData) => {
+ const processProjects = useCallback(async (snapshotData) => {
     const idKeys = Object.keys(snapshotData);
     const projects = Object.values(snapshotData);
     const getAllProject = await readProjectFile(projects);
@@ -197,27 +220,27 @@ export default function Projects({ title }) {
     }));
 }, []);
   useEffect(() => {
-    const fetchProjects = async () => {
-      const db = getDatabase(app)
-      const refDB = dbRef(db, 'projects')
+        const fetchProjects = async () => {
+        const db = getDatabase(app)
+        const refDB = dbRef(db, 'projects')
 
-      const loadProjects = async (snapshot) => {
-        if (snapshot.exists()) {
-          const data = await processProjects(snapshot.val());
-          setProjects(data);
-        }
-      };
-      const snapshot = await get(refDB)
-      await loadProjects(snapshot)
-
-      onValue(refDB, async (snapshot) => {
+        const loadProjects = async (snapshot) => {
+          if (snapshot.exists()) {
+            const data = await processProjects(snapshot.val());
+            setProjects(data);
+          }
+        };
+        const snapshot = await get(refDB)
         await loadProjects(snapshot)
-    });
+
+        onValue(refDB, async (snapshot) => {
+          await loadProjects(snapshot)
+      });
     };
     
     fetchProjects()
   }, [processProjects])
-
+  
   const ProjectLightbox = ({ item }) => {
     const [slides, setSlides] = useState(item.checkGallerie);
   
@@ -248,10 +271,7 @@ export default function Projects({ title }) {
         />
            )
     }
-
   let toggleButton = true
-
-
   return (
     <div className='py-6 px-8 md:px-32 text-white'>
       <div  
@@ -279,14 +299,22 @@ export default function Projects({ title }) {
      
       
         {projects.length > 0 && projects.map((item, index) => (
-          <div
-            key={index} className='flex w-full flex-wrap bg-button-bg gap-5 justify-center h-full border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+          <motion.div
+            key={index} className='flex w-full flex-wrap bg-button-bg gap-5 justify-center h-full border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'
+            variants={fadeAnimationVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true
+            }}
+            custom={index}>
         <button style={{ marginTop: '1em' }} onClick={() => setOpenGallerie(index)}>
         <FontAwesomeIcon icon={faImages} color='#4a596e' fontSize={30} className='text-[#4a596e] hover:text-blue-200 transition-all duration-300 ease-in-out' />
         </button>
 
         { openGallerie === index && (
            <ProjectLightbox item={item} />
+          
           )}
             <div className="flex flex-col rounded-lg w-full p-5">
               <div className="text-2xl font-bold text-white pb-6">
@@ -340,7 +368,7 @@ export default function Projects({ title }) {
                 }
                 </div>
             </div>
-          </div>
+          </motion.div>
 
         ))}
 

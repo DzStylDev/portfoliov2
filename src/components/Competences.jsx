@@ -32,14 +32,25 @@ export default function Competences() {
   return (
 
     <div className='py-6 px-8 md:px-32'>
-      <div
+      <motion.div
 
-        className='font-bold mb-2 text-white'>
+        className='font-bold mb-2 text-white'
+           initial={{
+          opacity: 0
+        }}
+        whileInView={{
+          opacity: 1
+        }}
+        transition={{
+          ease: 'easeIn',
+          duration: 1,
+          delay: .5
+        }}>
         Compétences
-      </div>
+      </motion.div>
 
       <div
-        className="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        className="w-full border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <motion.ul
           initial={{
             opacity: 0
