@@ -6,7 +6,6 @@ import { PlusIcon } from '@heroicons/react/24/solid';
 import { getDatabase, push, ref as dbRef, set, get, remove,onValue } from 'firebase/database'
 import { getDownloadURL, list, ref as storageRef, uploadBytes, getStorage, listAll , deleteObject} from 'firebase/storage'
 import app, { imageDB } from "../firebaseConfig"
-import toast from 'react-hot-toast';
 import { useEffect } from 'react';
 import Lightbox from "yet-another-react-lightbox";
 import 'yet-another-react-lightbox/styles.css';

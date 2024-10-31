@@ -1,6 +1,3 @@
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
-import { faLocationDot, faMobilePhone } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
 import Swal from "sweetalert2"
 import { motion } from "framer-motion"
@@ -158,52 +155,6 @@ export default function Contact() {
            >Envoyé</motion.button>
 
         </form> 
-        {/* <div className='w-full'>
-       
-       <div className='bg-gray-800 rounded-xl p-4 flex flex-col justify-between gap-2'>
-      
-            <motion.div 
-              className='flex items-center gap-5'
-              initial={{
-                opacity: 0,
-                y: 100
-               }}
-               whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: {
-                  delay: 0.05
-                }
-               }}
-               viewport={{
-                 once: true
-               }}>
-              <FontAwesomeIcon icon={faEnvelope} color='mintcream' className='text-[1.4em]' />
-              <span>amine.meddour@epitech.eu</span>
-            </motion.div>
-            
-            <motion.div 
-              className='flex items-center gap-5'
-              initial={{
-                opacity: 0,
-                y: 100
-               }}
-               whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: {
-                  delay: 0.09
-                }
-               }}
-               viewport={{
-                 once: true
-               }}>
-              <FontAwesomeIcon icon={faMobilePhone} color='mintcream' className='text-[1.4em]' />
-              <span>+33 04 45 21 56 36</span>
-            </motion.div>
-
-       </div>
-        </div> */}
       </div>
     </div>
     </div>
