@@ -89,7 +89,7 @@ export default function Projects({ title }) {
       member: member
     }).then(() => {
       Swal.fire({
-        title: `Le projet ${titre} à était créer avec success`,
+        title: `Le projet ${titre} a été crée avec succès`,
         icon: 'success'
       })
       toggleProject()
@@ -133,7 +133,7 @@ export default function Projects({ title }) {
 
           await Promise.all(deletePromises);
 
-          console.log("Tous les fichiers dans le dossier ont été supprimés avec succès !");
+          console.log("Tous les fichiers dans le dossier ont été supprimé avec succès !");
       }
     } catch (error) {
       console.error("Erreur lors de la vérification des fichiers :", error);
@@ -144,7 +144,7 @@ export default function Projects({ title }) {
          console.log(`Projet ${item.titre} supprimé avec succèss`);
 
          Swal.fire({
-          title: `Le projet ${item.titre} à était supprimer avec success`,
+          title: `Le projet ${item.titre} à était supprimer avec succès`,
           icon: 'success'
         })
      })
@@ -444,12 +444,12 @@ export default function Projects({ title }) {
 
                               <div className="">
 
-                                <label htmlFor="icones" className="sr-only">Selectionne le language</label>
+                                <label htmlFor="icones" className="sr-only">Selectionne le langage</label>
                                 <select id="icones"
                                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-e-lg border-s-gray-100 dark:border-s-gray-700 border-s-2 focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 >
 
-                                  <option value="">Séléctionne le language</option>
+                                  <option value="">Séléctionne le langage</option>
                                   <option value="faHtml5">HTML</option>
                                   <option value="faLaravel">Laravel</option>
                                   <option value="faSymfony">Symfony</option>
