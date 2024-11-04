@@ -360,7 +360,7 @@ export default function Projects({ title }) {
                 
               </div>
               <div className='mt-2 flex'>
-              { item.titre !== "RPGGames" && item.titre !== "Restaurant" && item.titre !== "Events"  && item.titre !== "Auto Ecole" && item.titre !== "html5gaming" ?
+              { item.titre !== "RPGGames" && item.titre !== "Restaurant" && item.titre !== "Events"  && item.titre !== "Auto Ecole" && item.titre !== "html5gaming"  && item.titre !== "Previously" ?
                   <button onClick={() => deleteProject(item.keyID, item)} className='bg-red-400 px-5 py-2 rounded-md text-sm cursor-pointer transition-all duration-200 ease-in-out hover:text-red-500 hover:bg-white'>Supprimer ce project</button>
                   : 
                   ''
