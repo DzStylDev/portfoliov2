@@ -51,3 +51,4 @@ Liste des icones que vous pouvez mettre en couleur :
 
 [Portfolio v2](https://github.com/DzStylDev/portfoliov2)
 
+[Figma](https://www.figma.com/design/lN23xkK5XWHTAWSfAYKaQN/entrainement-v1-algoweb?node-id=0-1&t=R0Q7jPnN9x4LlSjM-1)
